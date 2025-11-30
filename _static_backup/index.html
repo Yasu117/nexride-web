@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="未来を創造する - 革新的なテクノロジーソリューション">
+    <title>Building the Future | Innovation & Technology</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Fixed Header -->
+    <header>
+        <div class="logo">
+            <span>NexRide</span>
+        </div>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#services">事業内容</a></li>
+                <li><a href="about.html">会社概要</a></li>
+                <li><a href="#contact" class="btn-primary mobile-only">お問い合わせ</a></li>
+                <li class="desktop-only"><a href="#contact" class="btn-primary">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- AI Network Canvas Background -->
+        <canvas id="ai-canvas" class="ai-canvas"></canvas>
+
+        <!-- Hero Content -->
+        <div class="hero-content reveal">
+            <div class="yurayura">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                    </path>
+                    <path
+                        d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+                    </path>
+                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                </svg>
+            </div>
+            <h1 class="hero-title">For the better</h1>
+            <p class="hero-subtitle">
+                社会をより良く。<br>
+                お客様と共に成長を生み出す会社。
+            </p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn-primary">お問い合わせ</a>
+            </div>
+            <div class="code-decoration">
+                $ nexride launch --mode=growth
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title reveal">Our Services</h2>
+            <div class="bento-grid">
+                <div class="card reveal">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3>システム開発事業<br><span style="font-size: 0.8em; opacity: 0.7;">(Web/AI/業務系)</span></h3>
+                    <p>要件定義〜設計〜開発〜運用まで一貫支援。</p>
+                    <div class="card-decoration"></div>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>SES・人材エージェント事業</h3>
+                    <p>幅広い技術領域の即戦力エンジニア・デザイナーをアサイン。<br>事業会社・SIer・ゲーム会社を中心に支援。</p>
+                    <div class="card-decoration"></div>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 12h20"></path>
+                            <path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path>
+                            <path d="M4 8V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2"></path>
+                            <rect x="9" y="15" width="6" height="3"></rect>
+                        </svg>
+                    </div>
+                    <h3>デジタル業務再設計事業<br><span style="font-size: 0.8em; opacity: 0.7;">(Real DX)</span></h3>
+                    <p>紙/Excel/チャット/属人化した作業を“ゼロから再設計”。<br>自動化・RPA・AI活用・システム導入を組み合わせ、企業の現場オペレーションをルール化・効率化する伴走型支援。</p>
+                    <div class="card-decoration"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission" id="mission">
+        <div class="container">
+            <div class="mission-content reveal">
+                <h2 class="mission-title">For the better</h2>
+                <p class="mission-subtitle">社会をより良く。</p>
+                <p class="mission-description">
+                    社会をより良くするためにこの会社は生まれました。<br>
+                    私たちは、テクノロジーの力で社会課題を解決し、<br>
+                    すべてのステークホルダーに価値を提供します。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose" id="why-choose">
+        <div class="container">
+            <h2 class="section-title reveal">選ばれる理由</h2>
+            <div class="why-grid">
+                <div class="why-card reveal">
+                    <div class="why-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>お客様と共に成長</h3>
+                    <p>お客様と共に成長を生み出す会社。単なるサービス提供ではなく、パートナーとして共に成長することを念頭に置いています。</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                    </div>
+                    <h3>革新的なソリューション</h3>
+                    <p>最新のテクノロジーと深い業界知識を組み合わせ、お客様のビジネスに最適な革新的なソリューションを提供します。</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="22" y1="12" x2="18" y2="12"></line>
+                            <line x1="6" y1="12" x2="2" y2="12"></line>
+                            <line x1="12" y1="6" x2="12" y2="2"></line>
+                            <line x1="12" y1="22" x2="12" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3>成果にコミット</h3>
+                    <p>プロジェクトの成功を最優先に、確実な成果を出すことにコミットします。お客様の目標達成が私たちの目標です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section class="works" id="works">
+        <div class="container">
+            <h2 class="section-title reveal">事例・実績</h2>
+            <div class="works-grid">
+                <div class="work-card reveal">
+                    <div class="work-image" style="background: linear-gradient(45deg, #0F4C5C, #1a2a3a);"></div>
+                    <div class="work-content">
+                        <h3>大手通信キャリア様</h3>
+                        <p>大規模インフラ刷新プロジェクト支援</p>
+                    </div>
+                </div>
+                <div class="work-card reveal">
+                    <div class="work-image" style="background: linear-gradient(45deg, #57C7D4, #1a2a3a);"></div>
+                    <div class="work-content">
+                        <h3>金融系SIer様</h3>
+                        <p>次世代基幹システム開発支援</p>
+                    </div>
+                </div>
+                <div class="work-card reveal">
+                    <div class="work-image" style="background: linear-gradient(45deg, #0F4C5C, #57C7D4);"></div>
+                    <div class="work-content">
+                        <h3>自社開発</h3>
+                        <p>AIマッチングプラットフォーム開発</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news" id="news">
+        <div class="container">
+            <h2 class="section-title reveal">お知らせ</h2>
+            <div class="news-list reveal">
+                <article class="news-item">
+                    <span class="news-date">2024.01.01</span>
+                    <span class="news-category">News</span>
+                    <a href="#" class="news-title">コーポレートサイトをリニューアルしました</a>
+                </article>
+                <article class="news-item">
+                    <span class="news-date">2023.12.01</span>
+                    <span class="news-category">Press</span>
+                    <a href="#" class="news-title">オフィスを移転しました</a>
+                </article>
+                <article class="news-item">
+                    <span class="news-date">2023.11.15</span>
+                    <span class="news-category">Info</span>
+                    <a href="#" class="news-title">年末年始休業のお知らせ</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section class="careers" id="careers">
+        <div class="container">
+            <h2 class="section-title reveal">採用情報</h2>
+            <div class="coming-soon reveal">
+                <h3>Coming Soon</h3>
+                <p>現在、採用情報の公開準備中です。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title reveal">お問い合わせ</h2>
+            <form class="contact-form reveal">
+                <div class="form-group">
+                    <label for="name">お名前</label>
+                    <input type="text" id="name" name="name" required placeholder="山田 太郎">
+                </div>
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" name="email" required placeholder="info@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">件名</label>
+                    <input type="text" id="subject" name="subject" required placeholder="お問い合わせ件名">
+                </div>
+                <div class="form-group">
+                    <label for="message">お問い合わせ内容</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="お問い合わせ内容をご記入ください"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">送信する</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">NexRide</div>
+                <p class="copyright">&copy; 2025 NexRide Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

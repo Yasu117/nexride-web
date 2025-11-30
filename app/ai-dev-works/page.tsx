@@ -1,0 +1,635 @@
+'use client';
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+
+import { Rocket, Code, Zap, CheckCircle, ArrowRight, Mail, Menu, X, Cpu, Database, Layout, Clock, ShieldCheck, ChevronDown, ChevronUp, Users, MapPin } from 'lucide-react';
+import './styles.css';
+
+export default function AIDevWorksPage() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+    const [activePlanIndex, setActivePlanIndex] = useState(1); // Default to Standard plan
+    const [isComparisonOpen, setIsComparisonOpen] = useState(false);
+
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const toggleFaq = (index: number) => {
+        setOpenFaqIndex(openFaqIndex === index ? null : index);
+    };
+
+    const plans = [
+        {
+            id: 'mvp',
+            title: "MVP / Prototype",
+            subtitle: "プロトタイプ・実証実験",
+            price: "50万円〜",
+            period: "納期: 2週間〜",
+            features: [
+                '主要機能の実装 (MVP)',
+                'テンプレートUIデザイン',
+                'スマホ対応 (レスポンシブ)',
+                '基本認証機能',
+                'デプロイ・公開設定'
+            ],
+            isPopular: false
+        },
+        {
+            id: 'standard',
+            title: "Business Dev",
+            subtitle: "新規事業・業務システム",
+            price: "100万円〜",
+            period: "納期: 1ヶ月〜",
+            features: [
+                '要件定義・詳細設計',
+                'フルスクラッチ開発',
+                'UI/UXデザイン',
+                '管理画面 (Admin) 構築',
+                'データベース設計・構築',
+                '外部API連携'
+            ],
+            isPopular: true
+        },
+        {
+            id: 'enterprise',
+            title: "Enterprise",
+            subtitle: "大規模開発・ラボ型",
+            price: "ASK",
+            period: "期間: 相談",
+            features: [
+                '専任チーム体制',
+                '高度なAI機能実装',
+                '高負荷対策・スケーリング',
+                'セキュリティ監査',
+                'レガシーシステム移行',
+                '週次定例ミーティング'
+            ],
+            isPopular: false
+        }
+    ];
+
+    return (
+        <div className="ai-dev-works-wrapper">
+            {/* Navigation */}
+            <nav style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                zIndex: 1000,
+                background: 'rgba(10, 10, 15, 0.8)',
+                backdropFilter: 'blur(10px)',
+                borderBottom: '1px solid rgba(255,255,255,0.05)'
+            }}>
+                <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px' }}>
+                    <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <div style={{ fontSize: '1.5rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                            <Cpu color="#14b8a6" />
+                            <span>AI-Dev<span style={{ color: '#14b8a6' }}>.Works</span></span>
+                        </div>
+                    </Link>
+
+                    {/* Desktop Menu */}
+                    <div className="desktop-menu">
+                        <Link href="/" style={{ fontSize: '0.9rem', fontWeight: '500', color: 'white', textDecoration: 'none' }}>ホーム</Link>
+                        <a href="#features" style={{ fontSize: '0.9rem', fontWeight: '500' }}>特徴</a>
+                        <a href="#cases" style={{ fontSize: '0.9rem', fontWeight: '500' }}>実績</a>
+                        <a href="#plans" style={{ fontSize: '0.9rem', fontWeight: '500' }}>料金</a>
+                        <a href="#process" style={{ fontSize: '0.9rem', fontWeight: '500' }}>流れ</a>
+                        <a href="#company" style={{ fontSize: '0.9rem', fontWeight: '500' }}>会社概要</a>
+                        <a href="/#contact" className="btn btn-primary" style={{ padding: '0.5rem 1.5rem', fontSize: '0.9rem' }}>お問い合わせ</a>
+                    </div>
+
+                    {/* Mobile Menu Button */}
+                    <div className="mobile-menu-btn" onClick={toggleMenu}>
+                        {isMenuOpen ? <X /> : <Menu />}
+                    </div>
+                </div>
+                {/* Mobile Menu Overlay */}
+                {isMenuOpen && (
+                    <div style={{
+                        position: 'absolute',
+                        top: '80px',
+                        left: 0,
+                        right: 0,
+                        background: 'rgba(10, 10, 15, 0.95)',
+                        backdropFilter: 'blur(10px)',
+                        padding: '2rem',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '1.5rem',
+                        borderBottom: '1px solid rgba(255,255,255,0.05)'
+                    }}>
+                        <Link href="/" onClick={toggleMenu} style={{ fontSize: '1.1rem', fontWeight: '500', color: 'white', textDecoration: 'none' }}>ホーム</Link>
+                        <a href="#features" onClick={toggleMenu} style={{ fontSize: '1.1rem', fontWeight: '500' }}>特徴</a>
+                        <a href="#cases" onClick={toggleMenu} style={{ fontSize: '1.1rem', fontWeight: '500' }}>実績</a>
+                        <a href="#plans" onClick={toggleMenu} style={{ fontSize: '1.1rem', fontWeight: '500' }}>料金</a>
+                        <a href="#process" onClick={toggleMenu} style={{ fontSize: '1.1rem', fontWeight: '500' }}>流れ</a>
+                        <a href="#company" onClick={toggleMenu} style={{ fontSize: '1.1rem', fontWeight: '500' }}>会社概要</a>
+                        <a href="/#contact" onClick={toggleMenu} className="btn btn-primary" style={{ textAlign: 'center' }}>お問い合わせ</a>
+                    </div>
+                )}
+            </nav>
+
+            {/* Hero Section */}
+            <header style={{
+                position: 'relative',
+                height: '100vh',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                overflow: 'hidden',
+                paddingTop: '80px'
+            }}>
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundImage: 'url(/hero_bg.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    zIndex: -1
+                }}></div>
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    background: 'linear-gradient(to bottom, rgba(10,10,15,0.7), var(--bg-primary))',
+                    zIndex: -1
+                }}></div>
+
+                <div className="container" style={{ textAlign: 'center', maxWidth: '800px' }}>
+                    <div className="animate-fade-in" style={{ marginBottom: '1.5rem', display: 'inline-block', padding: '0.5rem 1rem', background: 'rgba(99, 102, 241, 0.1)', borderRadius: '2rem', border: '1px solid rgba(99, 102, 241, 0.3)', color: '#a5b4fc', fontSize: '0.9rem', fontWeight: '600' }}>
+                        ✨ 次世代のシステム開発
+                    </div>
+                    <h1 className="animate-fade-in" style={{ animationDelay: '0.2s', marginBottom: '1.5rem' }}>
+                        生成AI活用で<br />
+                        開発コストを<span style={{ color: '#14b8a6' }}>50%カット</span>
+                    </h1>
+                    <p className="animate-fade-in" style={{ animationDelay: '0.4s', marginBottom: '2.5rem', fontSize: '1.2rem' }}>
+                        品質はそのままに。AI×エンジニアのハイブリッド開発で、ビジネスの立ち上げを加速させます。
+                    </p>
+                    <div className="animate-fade-in" style={{ animationDelay: '0.6s', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                        <a href="/#contact" className="btn btn-primary">
+                            無料相談を申し込む <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
+                        </a>
+                        <a href="#plans" className="btn" style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                            料金プランを見る
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            {/* Problem & Solution Section */}
+            <section className="section" style={{ background: 'var(--bg-secondary)' }}>
+                <div className="container">
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+                        <div>
+                            <h2 style={{ marginBottom: '1.5rem' }}>こんなお悩みありませんか？</h2>
+                            <ul style={{ marginBottom: '2rem' }}>
+                                <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.1rem' }}>
+                                    <div style={{ background: 'rgba(20, 184, 166, 0.2)', padding: '0.5rem', borderRadius: '50%' }}><X size={20} color="#14b8a6" /></div>
+                                    システム開発の見積もりが高すぎる
+                                </li>
+                                <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.1rem' }}>
+                                    <div style={{ background: 'rgba(20, 184, 166, 0.2)', padding: '0.5rem', borderRadius: '50%' }}><X size={20} color="#14b8a6" /></div>
+                                    納期が3ヶ月以上かかり、チャンスを逃す
+                                </li>
+                                <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.1rem' }}>
+                                    <div style={{ background: 'rgba(20, 184, 166, 0.2)', padding: '0.5rem', borderRadius: '50%' }}><X size={20} color="#14b8a6" /></div>
+                                    エンジニア採用が難しく、開発が進まない
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="glass-card" style={{ background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(10, 10, 15, 0.8))', border: '1px solid var(--accent-primary)' }}>
+                            <h3 style={{ color: 'var(--accent-primary)', marginBottom: '1rem' }}>AI-Dev.Worksの解決策</h3>
+                            <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem' }}>
+                                AIがコードの8割を生成し、人間は「設計」と「品質管理」に集中する新しい開発スタイル。
+                            </p>
+                            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                                <div style={{ textAlign: 'center', flex: 1 }}>
+                                    <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'white' }}>1/2</div>
+                                    <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>コスト</div>
+                                </div>
+                                <div style={{ width: '1px', height: '40px', background: 'rgba(255,255,255,0.1)' }}></div>
+                                <div style={{ textAlign: 'center', flex: 1 }}>
+                                    <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'white' }}>2x</div>
+                                    <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>スピード</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Features Section */}
+            <section id="features" className="section">
+                <div className="container">
+                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                        <h2 style={{ fontSize: '2rem' }}>3つの強み</h2>
+                        <p>AIテクノロジーで実現する、新しい開発の常識</p>
+                    </div>
+
+                    <div className="features-grid">
+                        <FeatureCard
+                            icon={<Zap size={32} color="#14b8a6" />}
+                            title="Speed: 圧倒的なスピード"
+                            desc="コーディング、テスト、ドキュメント作成の一部をAIが担当。最短2週間でMVPをリリースし、機会損失を防ぎます。"
+                        />
+                        <FeatureCard
+                            icon={<Database size={32} color="#14b8a6" />}
+                            title="Cost: コスト50%削減"
+                            desc="工数削減により、人件費を大幅にカット。従来の開発会社の半額以下で提供し、浮いた予算をマーケティングへ。"
+                        />
+                        <FeatureCard
+                            icon={<ShieldCheck size={32} color="#14b8a6" />}
+                            title="Quality: 高品質なコード"
+                            desc="AIによるコード生成と、熟練エンジニアによるレビュー・修正のダブルチェック体制で、バグの少ない堅牢なシステムを構築。"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* Use Cases Section */}
+            <section id="cases" className="section" style={{ background: 'var(--bg-secondary)' }}>
+                <div className="container">
+                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                        <h2>開発実績・ユースケース</h2>
+                        <p>様々な業界・規模のプロジェクトで成果を出しています</p>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                        <UseCaseCard
+                            title="新規事業マッチングアプリ"
+                            category="Startup / MVP"
+                            image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            stats={[
+                                { label: '開発期間', value: '1.5ヶ月' },
+                                { label: '費用', value: '120万円' }
+                            ]}
+                            desc="位置情報を活用したリアルタイムマッチング機能を持つMVPアプリを開発。AI活用でバックエンド構築を自動化し、期間を大幅短縮。"
+                        />
+                        <UseCaseCard
+                            title="社内業務管理ダッシュボード"
+                            category="DX / Internal Tool"
+                            image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            stats={[
+                                { label: '開発期間', value: '3週間' },
+                                { label: '費用', value: '60万円' }
+                            ]}
+                            desc="スプレッドシートで管理していた営業データを一元管理するWebシステム。既存DBからのデータ移行スクリプトもAIで生成。"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* Plans Section */}
+            <section id="plans" className="section">
+                <div className="container">
+                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                        <h2>料金プラン</h2>
+                        <p>プロジェクトの規模・フェーズに合わせた最適な開発プラン</p>
+                    </div>
+
+                    {/* Mobile Tabs */}
+                    <div className="mobile-plan-tabs">
+                        {plans.map((plan, index) => (
+                            <button
+                                key={plan.id}
+                                className={`plan-tab-btn ${activePlanIndex === index ? 'active' : ''}`}
+                                onClick={() => setActivePlanIndex(index)}
+                            >
+                                {plan.title}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Plans Grid (Desktop) / Active Plan (Mobile) */}
+                    <div className="plans-grid">
+                        {plans.map((plan, index) => (
+                            <div key={plan.id} className={`plan-wrapper ${activePlanIndex === index ? 'mobile-active' : ''}`}>
+                                <PlanCard
+                                    title={plan.title}
+                                    subtitle={plan.subtitle}
+                                    price={plan.price}
+                                    period={plan.period}
+                                    features={plan.features}
+                                    isPopular={plan.isPopular}
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Other Services */}
+                    <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+                        <h3 style={{ textAlign: 'center', marginBottom: '1.5rem', fontSize: '1.25rem' }}>その他のサービス</h3>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
+
+                            {/* Web Production */}
+                            <div className="glass-card" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.5rem' }}>
+                                <div style={{ background: 'rgba(20, 184, 166, 0.2)', padding: '0.8rem', borderRadius: '50%', flexShrink: 0 }}>
+                                    <Layout size={24} color="#14b8a6" />
+                                </div>
+                                <div style={{ flex: 1 }}>
+                                    <h4 style={{ fontSize: '1.1rem', marginBottom: '0.2rem' }}>Web制作 / LP</h4>
+                                    <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>コーポレートサイト、LP、CMS構築</p>
+                                    <div style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>30万円〜</div>
+                                </div>
+                                <a href="/#contact" className="btn" style={{ background: 'rgba(255,255,255,0.1)', fontSize: '0.8rem', padding: '0.4rem 1rem', whiteSpace: 'nowrap' }}>相談</a>
+                            </div>
+
+                            {/* Maintenance */}
+                            <div className="glass-card" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.5rem' }}>
+                                <div style={{ background: 'rgba(20, 184, 166, 0.2)', padding: '0.8rem', borderRadius: '50%', flexShrink: 0 }}>
+                                    <ShieldCheck size={24} color="#14b8a6" />
+                                </div>
+                                <div style={{ flex: 1 }}>
+                                    <h4 style={{ fontSize: '1.1rem', marginBottom: '0.2rem' }}>保守・運用サポート</h4>
+                                    <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>サーバー監視、バグ修正、小規模改修</p>
+                                    <div style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>月額 5万円〜</div>
+                                </div>
+                                <a href="/#contact" className="btn" style={{ background: 'rgba(255,255,255,0.1)', fontSize: '0.8rem', padding: '0.4rem 1rem', whiteSpace: 'nowrap' }}>相談</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <p style={{ textAlign: 'center', marginTop: '2rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+                        ※ 開発プランは、ご契約時に着手金として費用の50%を申し受けます。残金は納品時のお支払いとなります。
+                    </p>
+                </div>
+            </section>
+
+            {/* Comparison Section */}
+            <section className="section" style={{ background: 'var(--bg-secondary)' }}>
+                <div className="container">
+                    <div className="glass-card" style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem' }}>
+                        <div
+                            onClick={() => setIsComparisonOpen(!isComparisonOpen)}
+                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', cursor: 'pointer' }}
+                        >
+                            <h2 style={{ textAlign: 'center', margin: 0, fontSize: '1.5rem' }}>従来開発との比較</h2>
+                            {isComparisonOpen ? <ChevronUp /> : <ChevronDown />}
+                        </div>
+
+                        <div className={`comparison-content ${isComparisonOpen ? 'open' : ''}`}>
+                            <div style={{ overflowX: 'auto', marginTop: '2rem' }}>
+                                <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '600px' }}>
+                                    <thead>
+                                        <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+                                            <th style={{ padding: '1rem', textAlign: 'left' }}>項目</th>
+                                            <th style={{ padding: '1rem', textAlign: 'left', color: '#a0a0b0' }}>一般的な開発会社</th>
+                                            <th style={{ padding: '1rem', textAlign: 'left', color: '#14b8a6', fontSize: '1.2rem' }}>弊社 (AI活用)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                                            <td style={{ padding: '1.5rem 1rem', fontWeight: 'bold' }}>費用</td>
+                                            <td style={{ padding: '1.5rem 1rem' }}>100% (高額)</td>
+                                            <td style={{ padding: '1.5rem 1rem', color: '#14b8a6', fontWeight: 'bold' }}>50% (半額)</td>
+                                        </tr>
+                                        <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                                            <td style={{ padding: '1.5rem 1rem', fontWeight: 'bold' }}>納期</td>
+                                            <td style={{ padding: '1.5rem 1rem' }}>3ヶ月〜</td>
+                                            <td style={{ padding: '1.5rem 1rem', color: '#14b8a6', fontWeight: 'bold' }}>1ヶ月〜</td>
+                                        </tr>
+                                        <tr>
+                                            <td style={{ padding: '1.5rem 1rem', fontWeight: 'bold' }}>保守・運用</td>
+                                            <td style={{ padding: '1.5rem 1rem' }}>属人的で不安定</td>
+                                            <td style={{ padding: '1.5rem 1rem', color: '#14b8a6', fontWeight: 'bold' }}>AI補助で安定稼働</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        {!isComparisonOpen && (
+                            <p style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+                                タップして詳細を表示
+                            </p>
+                        )}
+                    </div>
+                </div>
+            </section>
+
+            {/* Process Section */}
+            <section id="process" className="section">
+                <div className="container">
+                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                        <h2>開発フロー</h2>
+                        <p>ご相談から納品まで、スピーディかつ透明性のあるプロセス</p>
+                    </div>
+
+                    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                        <TimelineItem
+                            step="01"
+                            title="ヒアリング・要件定義"
+                            desc="AIを活用し、類似事例から最適な要件を即座にドラフト作成。ゼロから悩む時間をカットし、本質的な議論に時間を使います。"
+                        />
+                        <TimelineItem
+                            step="02"
+                            title="ご契約・着手金のお支払い"
+                            desc="提案内容にご納得いただけましたら契約締結となります。リソース確保のため、着手金（50%）のご入金をお願いしております。"
+                        />
+                        <TimelineItem
+                            step="03"
+                            title="プロトタイプ作成・開発"
+                            desc="AIコード生成により、動くプロトタイプを早期に提示。認識のズレを防ぎながら、爆速で本開発を進めます。"
+                        />
+                        <TimelineItem
+                            step="04"
+                            title="テスト・修正"
+                            desc="AIによる自動テストケース作成と実施により、品質を担保。バグの早期発見・修正を行います。"
+                        />
+                        <TimelineItem
+                            step="05"
+                            title="納品・残金のお支払い"
+                            desc="最終確認後、本番環境へデプロイ・納品となります。完了後、残金（50%）をお支払いいただきます。"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="section" style={{ background: 'var(--bg-secondary)' }}>
+                <div className="container" style={{ maxWidth: '800px' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                        <h2>よくある質問</h2>
+                        <p>AI開発に関する疑問にお答えします</p>
+                    </div>
+
+                    <div className="faq-list">
+                        <FaqItem
+                            question="AIが書いたコードの著作権はどうなりますか？"
+                            answer="納品されたコードの著作権は、完全にお客様に帰属します。弊社が権利を主張することはございませんのでご安心ください。"
+                            isOpen={openFaqIndex === 0}
+                            onClick={() => toggleFaq(0)}
+                        />
+                        <FaqItem
+                            question="セキュリティや情報漏洩の心配はありませんか？"
+                            answer="はい、万全の対策を行っております。開発に使用するAIツールは、入力データが学習に使用されない設定（API利用等）を行っており、機密情報は厳重に管理されます。"
+                            isOpen={openFaqIndex === 1}
+                            onClick={() => toggleFaq(1)}
+                        />
+                        <FaqItem
+                            question="着手金は必ず必要ですか？"
+                            answer="はい、短納期での開発を実現するためにリソースを優先的に確保する必要があるため、原則として着手金（50%）のご入金をお願いしております。"
+                            isOpen={openFaqIndex === 2}
+                            onClick={() => toggleFaq(2)}
+                        />
+                        <FaqItem
+                            question="開発後の保守・運用もお願いできますか？"
+                            answer="もちろんです。Growth Plan（月額5万円〜）にて、サーバー監視やバグ修正、小規模な改修などを継続的にサポートいたします。"
+                            isOpen={openFaqIndex === 3}
+                            onClick={() => toggleFaq(3)}
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* Company Section */}
+            <section id="company" className="section">
+                <div className="container" style={{ maxWidth: '800px' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                        <h2>会社概要</h2>
+                    </div>
+                    <div className="glass-card" style={{ textAlign: 'center', padding: '3rem' }}>
+                        <p style={{ marginBottom: '2rem', fontSize: '1.1rem' }}>
+                            運営会社：ネクスライド株式会社
+                        </p>
+                        <Link href="/company" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center' }}>
+                            会社概要を見る <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+
+
+            {/* Footer */}
+            <footer style={{ padding: '3rem 0', borderTop: '1px solid rgba(255,255,255,0.05)', textAlign: 'center', color: 'var(--text-secondary)' }}>
+                <div className="container">
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+                        <Cpu size={20} color="#14b8a6" />
+                        <span style={{ fontWeight: 'bold', color: 'white' }}>AI-Dev.Works</span>
+                    </div>
+                    <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}>Operated by NexRide Inc.</p>
+                    <p style={{ fontSize: '0.9rem' }}>© 2024 AI-Dev.Works. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    );
+}
+
+// Components
+interface FeatureCardProps {
+    icon: React.ReactNode;
+    title: string;
+    desc: string;
+}
+
+const FeatureCard = ({ icon, title, desc }: FeatureCardProps) => (
+    <div className="glass-card" style={{ textAlign: 'left' }}>
+        <div style={{ marginBottom: '1rem', background: 'rgba(255,255,255,0.05)', width: '60px', height: '60px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            {icon}
+        </div>
+        <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{title}</h3>
+        <p style={{ fontSize: '0.95rem' }}>{desc}</p>
+    </div>
+);
+
+interface UseCaseCardProps {
+    title: string;
+    category: string;
+    image: string;
+    stats: { label: string; value: string }[];
+    desc: string;
+}
+
+const UseCaseCard = ({ title, category, image, stats, desc }: UseCaseCardProps) => (
+    <div className="glass-card" style={{ padding: 0, overflow: 'hidden' }}>
+        <div style={{ height: '200px', overflow: 'hidden' }}>
+            <img src={image} alt={title} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }} />
+        </div>
+        <div style={{ padding: '1.5rem' }}>
+            <div style={{ fontSize: '0.8rem', color: 'var(--accent-primary)', fontWeight: 'bold', marginBottom: '0.5rem' }}>{category}</div>
+            <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>{title}</h3>
+            <div style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
+                {stats.map((stat, i) => (
+                    <div key={i}>
+                        <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>{stat.label}</div>
+                        <div style={{ fontWeight: 'bold' }}>{stat.value}</div>
+                    </div>
+                ))}
+            </div>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>{desc}</p>
+        </div>
+    </div>
+);
+
+interface PlanCardProps {
+    title: string;
+    subtitle: string;
+    price: string;
+    period: string;
+    features: string[];
+    isPopular: boolean;
+}
+
+const PlanCard = ({ title, subtitle, price, period, features, isPopular }: PlanCardProps) => (
+    <div className="glass-card" style={{ position: 'relative', height: '100%', border: isPopular ? '1px solid var(--accent-primary)' : '1px solid rgba(255,255,255,0.05)' }}>
+        {isPopular && <div className="popular-badge">RECOMMENDED</div>}
+        <div style={{ marginBottom: '1.5rem', textAlign: 'center' }}>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.2rem' }}>{title}</h3>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>{subtitle}</p>
+        </div>
+        <div style={{ textAlign: 'center', marginBottom: '1.5rem', paddingBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+            <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: 'white' }}>{price}</div>
+            <div style={{ fontSize: '0.9rem', color: 'var(--accent-primary)', fontWeight: 'bold' }}>{period}</div>
+        </div>
+        <ul style={{ marginBottom: '2rem' }}>
+            {features.map((f, i) => (
+                <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.8rem', fontSize: '0.95rem' }}>
+                    <CheckCircle size={16} color={isPopular ? "#14b8a6" : "#a0a0b0"} /> {f}
+                </li>
+            ))}
+        </ul>
+        <a href="/#contact" className={`btn ${isPopular ? 'btn-primary' : ''}`} style={{ width: '100%', textAlign: 'center', background: isPopular ? '' : 'rgba(255,255,255,0.1)' }}>
+            相談する
+        </a>
+    </div>
+);
+
+interface TimelineItemProps {
+    step: string;
+    title: string;
+    desc: string;
+}
+
+const TimelineItem = ({ step, title, desc }: TimelineItemProps) => (
+    <div className="timeline-item">
+        <div className="timeline-dot"></div>
+        <div style={{ fontSize: '0.9rem', color: 'var(--accent-primary)', fontWeight: 'bold', marginBottom: '0.2rem' }}>STEP {step}</div>
+        <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{title}</h3>
+        <p style={{ fontSize: '0.95rem' }}>{desc}</p>
+    </div>
+);
+
+interface FaqItemProps {
+    question: string;
+    answer: string;
+    isOpen: boolean;
+    onClick: () => void;
+}
+
+const FaqItem = ({ question, answer, isOpen, onClick }: FaqItemProps) => (
+    <div className={`faq-item ${isOpen ? 'active' : ''}`}>
+        <div className="faq-question" onClick={onClick}>
+            {question}
+            {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+        </div>
+        <div className="faq-answer">{answer}</div>
+    </div>
+);
