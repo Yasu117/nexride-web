@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="bg-white min-h-screen text-slate-900 overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative w-full h-[75vh] md:h-screen overflow-hidden">
+      <section className="relative w-full h-[100dvh] overflow-hidden">
         <HeroNode />
         <div className="relative z-10 flex flex-col items-start justify-end w-full h-full pointer-events-none select-none px-6 pb-32 md:px-20 md:pb-48 text-left">
           <div className="animate-fade-in-up">
@@ -78,8 +78,8 @@ export default function Home() {
       </section>
 
       {/* Recruit Section (Link to /recruit) */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center p-16 rounded-3xl bg-gradient-to-r from-[#0F4C5C]/10 to-[#57C7D4]/10 border border-[#57C7D4]/20">
+      <section className="py-8 px-4">
+        <div className="max-w-4xl mx-auto text-center p-6 md:p-16 rounded-3xl bg-gradient-to-r from-[#0F4C5C]/5 to-[#57C7D4]/5 border border-[#57C7D4]/20">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
             採用情報
           </h2>

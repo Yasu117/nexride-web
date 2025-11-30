@@ -28,13 +28,14 @@ const businesses: Business[] = [
     },
     {
         id: 2,
-        title: "SES事業",
+        title: "SES事業 / 人材紹介エージェント",
         serviceName: "常駐Plus10エージェント",
         description: "優秀なエンジニアと企業を繋ぎ、プロジェクトの成功を強力にバックアップします。",
         icon: <Users />,
         colorClass: "text-purple-600",
         bgClass: "bg-purple-50",
-        gradient: "from-purple-600 to-pink-500"
+        gradient: "from-purple-600 to-pink-500",
+        link: "/jyouchu-plus10"
     },
     {
         id: 3,
@@ -44,13 +45,14 @@ const businesses: Business[] = [
         icon: <RefreshCw />,
         colorClass: "text-emerald-600",
         bgClass: "bg-emerald-50",
-        gradient: "from-emerald-600 to-teal-500"
+        gradient: "from-emerald-600 to-teal-500",
+        link: "/real-dx"
     }
 ];
 
 export default function BusinessSection() {
     return (
-        <section id="services" className="py-12 bg-white relative overflow-hidden h-screen min-h-[600px] flex flex-col justify-center scroll-mt-32">
+        <section id="services" className="py-16 md:py-24 bg-white relative overflow-hidden flex flex-col justify-center scroll-mt-32">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] rounded-full bg-gradient-to-br from-blue-50/50 to-purple-50/50 blur-3xl opacity-60" />

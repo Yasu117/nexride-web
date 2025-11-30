@@ -9,18 +9,18 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathname = usePathname();
 
-    if (pathname === '/ai-dev-works') return null;
+    if (pathname === '/ai-dev-works' || pathname === '/jyouchu-plus10' || pathname === '/real-dx' || pathname === '/terms') return null;
 
     return (
         <header className="fixed top-4 left-0 right-0 mx-auto w-[95%] max-w-7xl z-50">
             <div className="bg-white rounded-2xl shadow-lg border border-slate-200/50 transition-all duration-300">
-                <div className="px-4 md:px-6 h-16 flex items-center justify-between">
-                    <Link href="/" className="flex items-center ml-6 hover:opacity-90 transition-opacity">
-                        <Image src="/nexride-logo.png" alt="NexRide" width={120} height={36} className="h-9 w-auto object-contain" />
+                <div className="px-4 md:px-6 h-14 md:h-16 flex items-center justify-between relative">
+                    <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0 md:ml-6 hover:opacity-90 transition-opacity">
+                        <Image src="/nexride-logo.png" alt="NexRide" width={120} height={36} className="h-7 md:h-9 w-auto object-contain" />
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex gap-8 items-center">
+                    <nav className="hidden md:flex gap-8 items-center ml-auto">
                         <Link href="/#services" className="text-sm font-bold text-slate-600 hover:text-[#0F4C5C] transition-colors">事業内容</Link>
                         <Link href="/cases" className="text-sm font-bold text-slate-600 hover:text-[#0F4C5C] transition-colors">事例・実績</Link>
                         <Link href="/about" className="text-sm font-bold text-slate-600 hover:text-[#0F4C5C] transition-colors">About us</Link>
@@ -33,7 +33,7 @@ export default function Header() {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden text-slate-900 p-2"
+                        className="md:hidden text-slate-900 p-2 ml-auto"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-label="Toggle menu"
                     >

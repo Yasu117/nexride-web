@@ -59,7 +59,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
     }
 
     return (
-        <form onSubmit={handleSubmit} className={`space-y-3 p-5 md:p-6 rounded-3xl bg-white border border-slate-200 shadow-sm ${className}`}>
+        <form onSubmit={handleSubmit} className={`space-y-3 p-4 md:p-6 rounded-3xl bg-white border border-slate-200 shadow-sm ${className}`}>
 
             {/* お問い合わせ種別 */}
             <div>

@@ -116,7 +116,7 @@ export default function WorksDock() {
     }, []);
 
     return (
-        <div className="w-full py-12 relative overflow-hidden">
+        <div className="w-full py-8 md:py-16 relative overflow-hidden">
             <div className="container mx-auto px-4 mb-8 relative z-10">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight max-w-4xl">
                     Our track record speaks for itself, delivering excellence in every project.
@@ -140,7 +140,7 @@ export default function WorksDock() {
                                 magnification={120}
                                 distance={200}
                                 baseWidth={80}
-                                className="bg-transparent border-none shadow-none gap-8 md:gap-12 h-72 items-center px-0"
+                                className="bg-transparent border-none shadow-none gap-8 md:gap-12 h-60 md:h-72 items-center px-0"
                             >
                                 {shuffledIcons.map((item, index) => {
                                     const uniqueIndex = groupIndex * shuffledIcons.length + index;
@@ -162,7 +162,7 @@ export default function WorksDock() {
                                             }}
                                             transition={{
                                                 y: {
-                                                    duration: 5,
+                                                    duration: 5.75,
                                                     repeat: Infinity,
                                                     repeatType: "reverse",
                                                     ease: "easeInOut",

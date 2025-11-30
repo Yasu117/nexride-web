@@ -7,7 +7,7 @@ import Image from 'next/image';
 export default function Footer() {
     const pathname = usePathname();
 
-    if (pathname === '/ai-dev-works') return null;
+    if (pathname === '/ai-dev-works' || pathname === '/jyouchu-plus10' || pathname === '/real-dx' || pathname === '/terms') return null;
 
     return (
         <footer className="footer bg-slate-50 text-slate-900 py-12 border-t border-slate-200">

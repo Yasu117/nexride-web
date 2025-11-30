@@ -16,8 +16,12 @@ const sacramento = Sacramento({
 });
 
 export const metadata: Metadata = {
-  title: "株式会社ネクスライド | NexRide",
+  title: "ネクスライド株式会社 NexRide inc.",
   description: "システム開発・SES・AI内製化支援のネクスライド",
+  icons: {
+    icon: '/custom-icon.png',
+    apple: '/custom-icon.png',
+  },
 };
 
 export default function RootLayout({

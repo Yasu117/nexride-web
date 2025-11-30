@@ -230,7 +230,8 @@ export default function HeroNode() {
         canvas.addEventListener('mousemove', handleMouseMove);
         canvas.addEventListener('mouseleave', handleMouseLeave);
 
-        resize();
+        // Initial resize with delay to ensure parent dimensions are ready
+        setTimeout(resize, 100);
         animate();
 
         return () => {

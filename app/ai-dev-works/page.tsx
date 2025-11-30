@@ -95,7 +95,6 @@ export default function AIDevWorksPage() {
                         <a href="#cases" style={{ fontSize: '0.9rem', fontWeight: '500' }}>実績</a>
                         <a href="#plans" style={{ fontSize: '0.9rem', fontWeight: '500' }}>料金</a>
                         <a href="#process" style={{ fontSize: '0.9rem', fontWeight: '500' }}>流れ</a>
-                        <a href="#company" style={{ fontSize: '0.9rem', fontWeight: '500' }}>会社概要</a>
                         <a href="/#contact" className="btn btn-primary" style={{ padding: '0.5rem 1.5rem', fontSize: '0.9rem' }}>お問い合わせ</a>
                     </div>
 
@@ -124,7 +123,6 @@ export default function AIDevWorksPage() {
                         <a href="#cases" onClick={toggleMenu} style={{ fontSize: '1.1rem', fontWeight: '500' }}>実績</a>
                         <a href="#plans" onClick={toggleMenu} style={{ fontSize: '1.1rem', fontWeight: '500' }}>料金</a>
                         <a href="#process" onClick={toggleMenu} style={{ fontSize: '1.1rem', fontWeight: '500' }}>流れ</a>
-                        <a href="#company" onClick={toggleMenu} style={{ fontSize: '1.1rem', fontWeight: '500' }}>会社概要</a>
                         <a href="/#contact" onClick={toggleMenu} className="btn btn-primary" style={{ textAlign: 'center' }}>お問い合わせ</a>
                     </div>
                 )}
@@ -489,22 +487,7 @@ export default function AIDevWorksPage() {
                 </div>
             </section>
 
-            {/* Company Section */}
-            <section id="company" className="section">
-                <div className="container" style={{ maxWidth: '800px' }}>
-                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                        <h2>会社概要</h2>
-                    </div>
-                    <div className="glass-card" style={{ textAlign: 'center', padding: '3rem' }}>
-                        <p style={{ marginBottom: '2rem', fontSize: '1.1rem' }}>
-                            運営会社：ネクスライド株式会社
-                        </p>
-                        <Link href="/company" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center' }}>
-                            会社概要を見る <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
-                        </Link>
-                    </div>
-                </div>
-            </section>
+
 
 
 
