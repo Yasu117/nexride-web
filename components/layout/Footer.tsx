@@ -19,7 +19,7 @@ export default function Footer() {
                         </Link>
                     </div>
                     <nav className="footer-nav flex gap-6 flex-wrap justify-center">
-                        <Link href="/services" className="text-sm text-slate-600 hover:text-[#0F4C5C] transition-colors">事業内容</Link>
+                        <Link href="/#services" className="text-sm text-slate-600 hover:text-[#0F4C5C] transition-colors">事業内容</Link>
                         <Link href="/cases" className="text-sm text-slate-600 hover:text-[#0F4C5C] transition-colors">事例・実績</Link>
                         <Link href="/about" className="text-sm text-slate-600 hover:text-[#0F4C5C] transition-colors">About us</Link>
                         <Link href="/recruit" className="text-sm text-slate-600 hover:text-[#0F4C5C] transition-colors">採用情報</Link>
