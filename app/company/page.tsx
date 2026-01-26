@@ -26,7 +26,7 @@ export default function CompanyPage() {
                         </div>
                         <div className="flex flex-col md:flex-row p-4 hover:bg-slate-50/50 transition-colors items-center">
                             <dt className="w-full md:w-1/4 font-bold text-slate-900 mb-2 md:mb-0">役員</dt>
-                            <dd className="w-full md:w-3/4 text-slate-600">取締役 柴田 泰成</dd>
+                            <dd className="w-full md:w-3/4 text-slate-600">共同創業者 柴田 泰成</dd>
                         </div>
                         <div className="flex flex-col md:flex-row p-4 hover:bg-slate-50/50 transition-colors items-center">
                             <dt className="w-full md:w-1/4 font-bold text-slate-900 mb-2 md:mb-0">資本金</dt>
