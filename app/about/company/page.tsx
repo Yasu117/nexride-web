@@ -12,7 +12,7 @@ export default function CompanyPage() {
                         { label: '会社名', value: 'ネクスライド株式会社' },
                         { label: '設立日', value: '2022年12月27日' },
                         { label: '代表者', value: '代表取締役 清水 泰孝' },
-                        { label: '役員', value: '共同創業者 柴田 泰成' },
+                        { label: '共同創業者', value: '柴田 泰成' },
                         { label: '資本金', value: '5,100万円' },
                         { label: '所在地', value: '東京都港区新橋2丁目20-15-601 新橋駅前ビル1号館 6階 BISTATION' },
                         { label: 'Mail', value: 'info@nexride.co.jp' },
