@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 import { Rocket, Code, Zap, CheckCircle, ArrowRight, Mail, Menu, X, Cpu, Database, Layout, Clock, ShieldCheck, ChevronDown, ChevronUp, Users, MapPin } from 'lucide-react';
@@ -82,9 +82,23 @@ export default function AIDevWorksPage() {
             }}>
                 <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px' }}>
                     <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <div style={{ fontSize: '1.5rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                            <Cpu color="#14b8a6" />
-                            <span>AI-Dev<span style={{ color: '#14b8a6' }}>.Works</span></span>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                            <div style={{
+                                width: '40px',
+                                height: '40px',
+                                background: 'linear-gradient(135deg, #14b8a6 0%, #0f766e 100%)',
+                                borderRadius: '12px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                boxShadow: '0 4px 12px rgba(20, 184, 166, 0.3)'
+                            }}>
+                                <Code size={24} color="white" />
+                            </div>
+                            <div>
+                                <span style={{ fontSize: '0.7rem', fontWeight: 'bold', color: '#94a3b8', display: 'block', lineHeight: 1, marginBottom: '2px' }}>システム開発/Web開発</span>
+                                <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'white', letterSpacing: '-0.5px', display: 'block', lineHeight: 1 }}>AI-Dev<span style={{ color: '#14b8a6' }}>.Works</span></span>
+                            </div>
                         </div>
                     </Link>
 
@@ -160,15 +174,18 @@ export default function AIDevWorksPage() {
                 }}></div>
 
                 <div className="container" style={{ textAlign: 'center', maxWidth: '800px' }}>
-                    <div className="animate-fade-in" style={{ marginBottom: '1.5rem', display: 'inline-block', padding: '0.5rem 1rem', background: 'rgba(99, 102, 241, 0.1)', borderRadius: '2rem', border: '1px solid rgba(99, 102, 241, 0.3)', color: '#a5b4fc', fontSize: '0.9rem', fontWeight: '600' }}>
-                        ✨ 次世代のシステム開発
-                    </div>
-                    <h1 className="animate-fade-in" style={{ animationDelay: '0.2s', marginBottom: '1.5rem' }}>
-                        生成AI活用で<br />
-                        開発コストを<span style={{ color: '#14b8a6' }}>50%カット</span>
+
+                    <h1 style={{ marginBottom: '1.5rem', minHeight: '8rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                        <div style={{ fontSize: 'inherit' }}>
+                            <TypewriterText text="「作りたい」を、" startDelay={500} />
+                        </div>
+                        <div style={{ fontSize: 'inherit', color: '#14b8a6' }}>
+                            <TypewriterText text="最速で現実に。" startDelay={2000} showCursor={true} />
+                        </div>
                     </h1>
-                    <p className="animate-fade-in" style={{ animationDelay: '0.4s', marginBottom: '2.5rem', fontSize: '1.2rem' }}>
-                        品質はそのままに。AI×エンジニアのハイブリッド開発で、ビジネスの立ち上げを加速させます。
+                    <p className="animate-fade-in" style={{ animationDelay: '3.5s', marginBottom: '2.5rem', fontSize: '1.2rem' }}>
+                        アイデアを即座にプロダクトへ。<br />
+                        圧倒的なスピードと妥協のない品質で、あなたのビジネスを加速させます。
                     </p>
                     <div className="animate-fade-in" style={{ animationDelay: '0.6s', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                         <a href="/#contact" className="btn btn-primary">
@@ -179,10 +196,18 @@ export default function AIDevWorksPage() {
                         </a>
                     </div>
                 </div>
-            </header>
+
+
+                {/* Scroll Indicator */}
+                <div className="scroll-indicator animate-fade-in" style={{ animationDelay: '4.5s' }}>
+                    <span style={{ fontSize: '0.75rem', letterSpacing: '2px', marginBottom: '0.5rem' }}>SCROLL</span>
+                    <div className="scroll-line"></div>
+                </div>
+            </header >
 
             {/* Problem & Solution Section */}
-            <section className="section" style={{ background: 'var(--bg-secondary)' }}>
+            < section className="section" style={{ background: 'var(--bg-secondary)' }
+            }>
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
                         <div>
@@ -205,12 +230,13 @@ export default function AIDevWorksPage() {
                         <div className="glass-card" style={{ background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(10, 10, 15, 0.8))', border: '1px solid var(--accent-primary)' }}>
                             <h3 style={{ color: 'var(--accent-primary)', marginBottom: '1rem' }}>AI-Dev.Worksの解決策</h3>
                             <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem' }}>
-                                AIがコードの8割を生成し、人間は「設計」と「品質管理」に集中する新しい開発スタイル。
+                                最新テクノロジーと熟練エンジニアの融合。<br />
+                                圧倒的な開発スピードで、市場投入までの時間を劇的に短縮します。
                             </p>
                             <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                                 <div style={{ textAlign: 'center', flex: 1 }}>
-                                    <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'white' }}>1/2</div>
-                                    <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>コスト</div>
+                                    <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'white' }}>High</div>
+                                    <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>クオリティ</div>
                                 </div>
                                 <div style={{ width: '1px', height: '40px', background: 'rgba(255,255,255,0.1)' }}></div>
                                 <div style={{ textAlign: 'center', flex: 1 }}>
@@ -221,10 +247,10 @@ export default function AIDevWorksPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Features Section */}
-            <section id="features" className="section">
+            < section id="features" className="section" >
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <h2 style={{ fontSize: '2rem' }}>3つの強み</h2>
@@ -235,18 +261,51 @@ export default function AIDevWorksPage() {
                         <FeatureCard
                             icon={<Zap size={32} color="#14b8a6" />}
                             title="Speed: 圧倒的なスピード"
-                            desc="コーディング、テスト、ドキュメント作成の一部をAIが担当。最短2週間でMVPをリリースし、機会損失を防ぎます。"
+                            desc="最新技術と効率化されたプロセスにより、開発期間を大幅に短縮。ビジネスチャンスを逃さず、最速で市場へ投入します。"
                         />
                         <FeatureCard
-                            icon={<Database size={32} color="#14b8a6" />}
-                            title="Cost: コスト50%削減"
-                            desc="工数削減により、人件費を大幅にカット。従来の開発会社の半額以下で提供し、浮いた予算をマーケティングへ。"
+                            icon={<Users size={32} color="#14b8a6" />}
+                            title="Direct: エンジニア直結"
+                            desc="営業担当を挟まず、リードエンジニアが直接担当。ビジネス背景を深く理解し、単なる実装だけでなく事業成長に最適な技術提案を即座に行います。"
                         />
                         <FeatureCard
                             icon={<ShieldCheck size={32} color="#14b8a6" />}
-                            title="Quality: 高品質なコード"
-                            desc="AIによるコード生成と、熟練エンジニアによるレビュー・修正のダブルチェック体制で、バグの少ない堅牢なシステムを構築。"
+                            title="Quality: 妥協なき高品質"
+                            desc="モダンな技術選定と厳格なコード規約に基づき、拡張性と保守性の高いシステムを構築。将来的な内製化や引き継ぎもスムーズです。"
                         />
+                    </div>
+                </div>
+            </section >
+
+            {/* Tech Stack Section */}
+            <section className="section" style={{ background: 'var(--bg-secondary)', padding: '4rem 0' }}>
+                <div className="container">
+                    <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                        <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Technology Stack</h3>
+                        <p style={{ color: 'var(--text-secondary)' }}>パフォーマンスと保守性に優れた、モダンな技術を採用しています</p>
+                    </div>
+
+                    <div className="marquee-container" style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
+                        <div className="marquee-content">
+                            {/* Duplicate items for seamless loop */}
+                            {[...['Next.js', 'React', 'TypeScript', 'Node.js', 'Python', 'Supabase', 'AWS', 'Vercel', 'TailwindCSS', 'PostgreSQL', 'Docker', 'Git', 'GCP', 'Firebase', 'GraphQL', 'Prisma', 'Stripe', 'OpenAI API'], ...['Next.js', 'React', 'TypeScript', 'Node.js', 'Python', 'Supabase', 'AWS', 'Vercel', 'TailwindCSS', 'PostgreSQL', 'Docker', 'Git', 'GCP', 'Firebase', 'GraphQL', 'Prisma', 'Stripe', 'OpenAI API']].map((tech, index) => (
+                                <div key={`${tech}-${index}`} className="glass-card" style={{
+                                    padding: '0.8rem 1.5rem',
+                                    margin: 0,
+                                    fontSize: '1rem',
+                                    fontWeight: '500',
+                                    background: 'rgba(255,255,255,0.03)',
+                                    border: '1px solid rgba(255,255,255,0.1)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '0.5rem',
+                                    whiteSpace: 'nowrap'
+                                }}>
+                                    <Code size={16} color="#14b8a6" />
+                                    {tech}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -268,7 +327,7 @@ export default function AIDevWorksPage() {
                                 { label: '開発期間', value: '1.5ヶ月' },
                                 { label: '費用', value: '120万円' }
                             ]}
-                            desc="位置情報を活用したリアルタイムマッチング機能を持つMVPアプリを開発。AI活用でバックエンド構築を自動化し、期間を大幅短縮。"
+                            desc="位置情報を活用したリアルタイムマッチング機能を持つMVPアプリを開発。バックエンド構築を効率化し、短期間でのローンチを実現。"
                         />
                         <UseCaseCard
                             title="社内業務管理ダッシュボード"
@@ -278,18 +337,19 @@ export default function AIDevWorksPage() {
                                 { label: '開発期間', value: '3週間' },
                                 { label: '費用', value: '60万円' }
                             ]}
-                            desc="スプレッドシートで管理していた営業データを一元管理するWebシステム。既存DBからのデータ移行スクリプトもAIで生成。"
+                            desc="スプレッドシートで管理していた営業データを一元管理するWebシステム。データ移行から実装までをワンストップで迅速に遂行。"
                         />
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Plans Section */}
-            <section id="plans" className="section">
+            < section id="plans" className="section" >
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <h2>料金プラン</h2>
-                        <p>プロジェクトの規模・フェーズに合わせた最適な開発プラン</p>
+                        <p style={{ marginBottom: '1rem' }}>プロジェクトの規模・フェーズに合わせた最適な開発プラン</p>
+                        <p style={{ color: 'var(--accent-primary)', fontWeight: 'bold' }}>人月計算で開発費を見積もりません。</p>
                     </div>
 
                     {/* Mobile Tabs */}
@@ -359,61 +419,57 @@ export default function AIDevWorksPage() {
                         ※ 開発プランは、ご契約時に着手金として費用の50%を申し受けます。残金は納品時のお支払いとなります。
                     </p>
                 </div>
-            </section>
+            </section >
 
             {/* Comparison Section */}
-            <section className="section" style={{ background: 'var(--bg-secondary)' }}>
+            < section className="section" style={{ background: 'var(--bg-secondary)' }}>
                 <div className="container">
                     <div className="glass-card" style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem' }}>
-                        <div
-                            onClick={() => setIsComparisonOpen(!isComparisonOpen)}
-                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', cursor: 'pointer' }}
-                        >
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginBottom: '2rem' }}>
                             <h2 style={{ textAlign: 'center', margin: 0, fontSize: '1.5rem' }}>従来開発との比較</h2>
-                            {isComparisonOpen ? <ChevronUp /> : <ChevronDown />}
                         </div>
 
-                        <div className={`comparison-content ${isComparisonOpen ? 'open' : ''}`}>
-                            <div style={{ overflowX: 'auto', marginTop: '2rem' }}>
+                        <div className="comparison-content open" style={{ display: 'grid' }}>
+                            <div style={{ overflowX: 'auto' }}>
                                 <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '600px' }}>
                                     <thead>
                                         <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                                             <th style={{ padding: '1rem', textAlign: 'left' }}>項目</th>
                                             <th style={{ padding: '1rem', textAlign: 'left', color: '#a0a0b0' }}>一般的な開発会社</th>
-                                            <th style={{ padding: '1rem', textAlign: 'left', color: '#14b8a6', fontSize: '1.2rem' }}>弊社 (AI活用)</th>
+                                            <th style={{ padding: '1rem', textAlign: 'left', color: '#14b8a6', fontSize: '1.2rem' }}>弊社</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                                            <td style={{ padding: '1.5rem 1rem', fontWeight: 'bold' }}>費用</td>
-                                            <td style={{ padding: '1.5rem 1rem' }}>100% (高額)</td>
-                                            <td style={{ padding: '1.5rem 1rem', color: '#14b8a6', fontWeight: 'bold' }}>50% (半額)</td>
+                                            <td style={{ padding: '1.5rem 1rem', fontWeight: 'bold' }}>担当者</td>
+                                            <td style={{ padding: '1.5rem 1rem' }}>営業・PM経由 (伝言ゲーム)</td>
+                                            <td style={{ padding: '1.5rem 1rem', color: '#14b8a6', fontWeight: 'bold' }}>エンジニア直結 (即断即決)</td>
                                         </tr>
                                         <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                                            <td style={{ padding: '1.5rem 1rem', fontWeight: 'bold' }}>納期</td>
-                                            <td style={{ padding: '1.5rem 1rem' }}>3ヶ月〜</td>
-                                            <td style={{ padding: '1.5rem 1rem', color: '#14b8a6', fontWeight: 'bold' }}>1ヶ月〜</td>
+                                            <td style={{ padding: '1.5rem 1rem', fontWeight: 'bold' }}>コストパフォーマンス</td>
+                                            <td style={{ padding: '1.5rem 1rem' }}>人月計算で高額になりがち</td>
+                                            <td style={{ padding: '1.5rem 1rem', color: '#14b8a6', fontWeight: 'bold' }}>成果にコミットした適正価格</td>
+                                        </tr>
+                                        <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                                            <td style={{ padding: '1.5rem 1rem', fontWeight: 'bold' }}>開発スピード</td>
+                                            <td style={{ padding: '1.5rem 1rem' }}>数ヶ月〜半年</td>
+                                            <td style={{ padding: '1.5rem 1rem', color: '#14b8a6', fontWeight: 'bold' }}>数週間〜最短納品</td>
                                         </tr>
                                         <tr>
-                                            <td style={{ padding: '1.5rem 1rem', fontWeight: 'bold' }}>保守・運用</td>
-                                            <td style={{ padding: '1.5rem 1rem' }}>属人的で不安定</td>
-                                            <td style={{ padding: '1.5rem 1rem', color: '#14b8a6', fontWeight: 'bold' }}>AI補助で安定稼働</td>
+                                            <td style={{ padding: '1.5rem 1rem', fontWeight: 'bold' }}>品質・保守性</td>
+                                            <td style={{ padding: '1.5rem 1rem' }}>属人的なばらつき</td>
+                                            <td style={{ padding: '1.5rem 1rem', color: '#14b8a6', fontWeight: 'bold' }}>標準化された高品質コード</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                        {!isComparisonOpen && (
-                            <p style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-                                タップして詳細を表示
-                            </p>
-                        )}
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Process Section */}
-            <section id="process" className="section">
+            < section id="process" className="section" >
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <h2>開発フロー</h2>
@@ -424,7 +480,7 @@ export default function AIDevWorksPage() {
                         <TimelineItem
                             step="01"
                             title="ヒアリング・要件定義"
-                            desc="AIを活用し、類似事例から最適な要件を即座にドラフト作成。ゼロから悩む時間をカットし、本質的な議論に時間を使います。"
+                            desc="お客様のアイデアや課題を深くヒアリング。類似事例のノウハウを活用し、最適な要件定義をスピーディに行います。"
                         />
                         <TimelineItem
                             step="02"
@@ -434,12 +490,12 @@ export default function AIDevWorksPage() {
                         <TimelineItem
                             step="03"
                             title="プロトタイプ作成・開発"
-                            desc="AIコード生成により、動くプロトタイプを早期に提示。認識のズレを防ぎながら、爆速で本開発を進めます。"
+                            desc="開発効率化ツールを駆使し、動くプロトタイプを早期に提示。認識のズレを防ぎながら、本開発を一気に進めます。"
                         />
                         <TimelineItem
                             step="04"
                             title="テスト・修正"
-                            desc="AIによる自動テストケース作成と実施により、品質を担保。バグの早期発見・修正を行います。"
+                            desc="自動化されたテストと熟練エンジニアによるコードレビューを実施。バグの早期発見・修正を行い、品質を磨き上げます。"
                         />
                         <TimelineItem
                             step="05"
@@ -448,10 +504,10 @@ export default function AIDevWorksPage() {
                         />
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* FAQ Section */}
-            <section className="section" style={{ background: 'var(--bg-secondary)' }}>
+            < section className="section" style={{ background: 'var(--bg-secondary)' }}>
                 <div className="container" style={{ maxWidth: '800px' }}>
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <h2>よくある質問</h2>
@@ -460,14 +516,14 @@ export default function AIDevWorksPage() {
 
                     <div className="faq-list">
                         <FaqItem
-                            question="AIが書いたコードの著作権はどうなりますか？"
-                            answer="納品されたコードの著作権は、完全にお客様に帰属します。弊社が権利を主張することはございませんのでご安心ください。"
+                            question="コードの権利や、将来的な内製化について教えてください。"
+                            answer="納品されたコードの著作権は完全にお客様に帰属します。また、特定のベンダーに依存しない標準的な技術（Next.js等）で構築するため、将来的な内製化や他社への引き継ぎもスムーズに行えます。"
                             isOpen={openFaqIndex === 0}
                             onClick={() => toggleFaq(0)}
                         />
                         <FaqItem
                             question="セキュリティや情報漏洩の心配はありませんか？"
-                            answer="はい、万全の対策を行っております。開発に使用するAIツールは、入力データが学習に使用されない設定（API利用等）を行っており、機密情報は厳重に管理されます。"
+                            answer="はい、万全の対策を行っております。開発環境や使用ツールにおいて厳格なセキュリティ基準を設けており、お客様の機密情報は厳重に管理されます。"
                             isOpen={openFaqIndex === 1}
                             onClick={() => toggleFaq(1)}
                         />
@@ -485,14 +541,14 @@ export default function AIDevWorksPage() {
                         />
                     </div>
                 </div>
-            </section>
+            </section >
 
 
 
 
 
             {/* Footer */}
-            <footer style={{ padding: '3rem 0', borderTop: '1px solid rgba(255,255,255,0.05)', textAlign: 'center', color: 'var(--text-secondary)' }}>
+            < footer style={{ padding: '3rem 0', borderTop: '1px solid rgba(255,255,255,0.05)', textAlign: 'center', color: 'var(--text-secondary)' }}>
                 <div className="container">
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
                         <Cpu size={20} color="#14b8a6" />
@@ -501,8 +557,8 @@ export default function AIDevWorksPage() {
                     <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}>Operated by NexRide Inc.</p>
                     <p style={{ fontSize: '0.9rem' }}>© 2024 AI-Dev.Works. All rights reserved.</p>
                 </div>
-            </footer>
-        </div>
+            </footer >
+        </div >
     );
 }
 
@@ -616,3 +672,57 @@ const FaqItem = ({ question, answer, isOpen, onClick }: FaqItemProps) => (
         <div className="faq-answer">{answer}</div>
     </div>
 );
+
+interface TypewriterTextProps {
+    text: string;
+    startDelay?: number;
+    showCursor?: boolean;
+}
+
+const TypewriterText = ({ text, startDelay = 0, showCursor = false }: TypewriterTextProps) => {
+    const [displayedText, setDisplayedText] = useState('');
+    const [hasStarted, setHasStarted] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setHasStarted(true);
+        }, startDelay);
+        return () => clearTimeout(timer);
+    }, [startDelay]);
+
+    useEffect(() => {
+        if (!hasStarted) return;
+
+        let i = 0;
+        const interval = setInterval(() => {
+            setDisplayedText(text.substring(0, i + 1));
+            i++;
+            if (i >= text.length) clearInterval(interval);
+        }, 100);
+
+        return () => clearInterval(interval);
+    }, [hasStarted, text]);
+
+    const [blink, setBlink] = useState(true);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setBlink(b => !b);
+        }, 500);
+        return () => clearInterval(interval);
+    }, []);
+
+    const isTyping = hasStarted && displayedText.length < text.length;
+    const isFinished = hasStarted && displayedText.length === text.length;
+
+    return (
+        <span>
+            {displayedText}
+            <span style={{
+                opacity: (isTyping || (isFinished && showCursor && blink)) ? 1 : 0,
+                transition: 'opacity 0.1s',
+                marginLeft: '2px',
+                color: '#14b8a6'
+            }}>|</span>
+        </span>
+    );
+};
