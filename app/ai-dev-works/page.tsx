@@ -86,18 +86,18 @@ export default function AIDevWorksPage() {
                             <div style={{
                                 width: '40px',
                                 height: '40px',
-                                background: 'linear-gradient(135deg, #14b8a6 0%, #0f766e 100%)',
+                                background: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)',
                                 borderRadius: '12px',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
-                                boxShadow: '0 4px 12px rgba(20, 184, 166, 0.3)'
+                                boxShadow: '0 4px 12px rgba(37, 99, 235, 0.3)'
                             }}>
                                 <Code size={24} color="white" />
                             </div>
                             <div>
                                 <span style={{ fontSize: '0.7rem', fontWeight: 'bold', color: '#94a3b8', display: 'block', lineHeight: 1, marginBottom: '2px' }}>システム開発/Web開発</span>
-                                <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'white', letterSpacing: '-0.5px', display: 'block', lineHeight: 1 }}>AI-Dev<span style={{ color: '#14b8a6' }}>.Works</span></span>
+                                <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'white', letterSpacing: '-0.5px', display: 'block', lineHeight: 1 }}>AI-Dev<span style={{ color: '#2563eb' }}>.Works</span></span>
                             </div>
                         </div>
                     </Link>
@@ -179,7 +179,7 @@ export default function AIDevWorksPage() {
                         <div style={{ fontSize: 'inherit' }}>
                             <TypewriterText text="「作りたい」を、" startDelay={500} />
                         </div>
-                        <div style={{ fontSize: 'inherit', color: '#14b8a6' }}>
+                        <div style={{ fontSize: 'inherit', color: '#2563eb' }}>
                             <TypewriterText text="最速で現実に。" startDelay={2000} showCursor={true} />
                         </div>
                     </h1>
@@ -214,15 +214,15 @@ export default function AIDevWorksPage() {
                             <h2 style={{ marginBottom: '1.5rem' }}>こんなお悩みありませんか？</h2>
                             <ul style={{ marginBottom: '2rem' }}>
                                 <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.1rem' }}>
-                                    <div style={{ background: 'rgba(20, 184, 166, 0.2)', padding: '0.5rem', borderRadius: '50%' }}><X size={20} color="#14b8a6" /></div>
+                                    <div style={{ background: 'rgba(20, 184, 166, 0.2)', padding: '0.5rem', borderRadius: '50%' }}><X size={20} color="#2563eb" /></div>
                                     システム開発の見積もりが高すぎる
                                 </li>
                                 <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.1rem' }}>
-                                    <div style={{ background: 'rgba(20, 184, 166, 0.2)', padding: '0.5rem', borderRadius: '50%' }}><X size={20} color="#14b8a6" /></div>
+                                    <div style={{ background: 'rgba(20, 184, 166, 0.2)', padding: '0.5rem', borderRadius: '50%' }}><X size={20} color="#2563eb" /></div>
                                     納期が3ヶ月以上かかり、チャンスを逃す
                                 </li>
                                 <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.1rem' }}>
-                                    <div style={{ background: 'rgba(20, 184, 166, 0.2)', padding: '0.5rem', borderRadius: '50%' }}><X size={20} color="#14b8a6" /></div>
+                                    <div style={{ background: 'rgba(20, 184, 166, 0.2)', padding: '0.5rem', borderRadius: '50%' }}><X size={20} color="#2563eb" /></div>
                                     エンジニア採用が難しく、開発が進まない
                                 </li>
                             </ul>
@@ -259,17 +259,17 @@ export default function AIDevWorksPage() {
 
                     <div className="features-grid">
                         <FeatureCard
-                            icon={<Zap size={32} color="#14b8a6" />}
+                            icon={<Zap size={32} color="#2563eb" />}
                             title="Speed: 圧倒的なスピード"
                             desc="最新技術と効率化されたプロセスにより、開発期間を大幅に短縮。ビジネスチャンスを逃さず、最速で市場へ投入します。"
                         />
                         <FeatureCard
-                            icon={<Users size={32} color="#14b8a6" />}
+                            icon={<Users size={32} color="#2563eb" />}
                             title="Direct: エンジニア直結"
                             desc="営業担当を挟まず、リードエンジニアが直接担当。ビジネス背景を深く理解し、単なる実装だけでなく事業成長に最適な技術提案を即座に行います。"
                         />
                         <FeatureCard
-                            icon={<ShieldCheck size={32} color="#14b8a6" />}
+                            icon={<ShieldCheck size={32} color="#2563eb" />}
                             title="Quality: 妥協なき高品質"
                             desc="モダンな技術選定と厳格なコード規約に基づき、拡張性と保守性の高いシステムを構築。将来的な内製化や引き継ぎもスムーズです。"
                         />
@@ -301,7 +301,7 @@ export default function AIDevWorksPage() {
                                     gap: '0.5rem',
                                     whiteSpace: 'nowrap'
                                 }}>
-                                    <Code size={16} color="#14b8a6" />
+                                    <Code size={16} color="#2563eb" />
                                     {tech}
                                 </div>
                             ))}
@@ -389,7 +389,7 @@ export default function AIDevWorksPage() {
                             {/* Web Production */}
                             <div className="glass-card" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.5rem' }}>
                                 <div style={{ background: 'rgba(20, 184, 166, 0.2)', padding: '0.8rem', borderRadius: '50%', flexShrink: 0 }}>
-                                    <Layout size={24} color="#14b8a6" />
+                                    <Layout size={24} color="#2563eb" />
                                 </div>
                                 <div style={{ flex: 1 }}>
                                     <h4 style={{ fontSize: '1.1rem', marginBottom: '0.2rem' }}>Web制作 / LP</h4>
@@ -402,7 +402,7 @@ export default function AIDevWorksPage() {
                             {/* Maintenance */}
                             <div className="glass-card" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.5rem' }}>
                                 <div style={{ background: 'rgba(20, 184, 166, 0.2)', padding: '0.8rem', borderRadius: '50%', flexShrink: 0 }}>
-                                    <ShieldCheck size={24} color="#14b8a6" />
+                                    <ShieldCheck size={24} color="#2563eb" />
                                 </div>
                                 <div style={{ flex: 1 }}>
                                     <h4 style={{ fontSize: '1.1rem', marginBottom: '0.2rem' }}>保守・運用サポート</h4>
@@ -436,29 +436,29 @@ export default function AIDevWorksPage() {
                                         <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                                             <th style={{ padding: '1rem', textAlign: 'left' }}>項目</th>
                                             <th style={{ padding: '1rem', textAlign: 'left', color: '#a0a0b0' }}>一般的な開発会社</th>
-                                            <th style={{ padding: '1rem', textAlign: 'left', color: '#14b8a6', fontSize: '1.2rem' }}>弊社</th>
+                                            <th style={{ padding: '1rem', textAlign: 'left', color: '#2563eb', fontSize: '1.2rem' }}>弊社</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                                             <td style={{ padding: '1.5rem 1rem', fontWeight: 'bold' }}>担当者</td>
                                             <td style={{ padding: '1.5rem 1rem' }}>営業・PM経由 (伝言ゲーム)</td>
-                                            <td style={{ padding: '1.5rem 1rem', color: '#14b8a6', fontWeight: 'bold' }}>エンジニア直結 (即断即決)</td>
+                                            <td style={{ padding: '1.5rem 1rem', color: '#2563eb', fontWeight: 'bold' }}>エンジニア直結 (即断即決)</td>
                                         </tr>
                                         <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                                             <td style={{ padding: '1.5rem 1rem', fontWeight: 'bold' }}>コストパフォーマンス</td>
                                             <td style={{ padding: '1.5rem 1rem' }}>人月計算で高額になりがち</td>
-                                            <td style={{ padding: '1.5rem 1rem', color: '#14b8a6', fontWeight: 'bold' }}>成果にコミットした適正価格</td>
+                                            <td style={{ padding: '1.5rem 1rem', color: '#2563eb', fontWeight: 'bold' }}>成果にコミットした適正価格</td>
                                         </tr>
                                         <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                                             <td style={{ padding: '1.5rem 1rem', fontWeight: 'bold' }}>開発スピード</td>
                                             <td style={{ padding: '1.5rem 1rem' }}>数ヶ月〜半年</td>
-                                            <td style={{ padding: '1.5rem 1rem', color: '#14b8a6', fontWeight: 'bold' }}>数週間〜最短納品</td>
+                                            <td style={{ padding: '1.5rem 1rem', color: '#2563eb', fontWeight: 'bold' }}>数週間〜最短納品</td>
                                         </tr>
                                         <tr>
                                             <td style={{ padding: '1.5rem 1rem', fontWeight: 'bold' }}>品質・保守性</td>
                                             <td style={{ padding: '1.5rem 1rem' }}>属人的なばらつき</td>
-                                            <td style={{ padding: '1.5rem 1rem', color: '#14b8a6', fontWeight: 'bold' }}>標準化された高品質コード</td>
+                                            <td style={{ padding: '1.5rem 1rem', color: '#2563eb', fontWeight: 'bold' }}>標準化された高品質コード</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -551,7 +551,7 @@ export default function AIDevWorksPage() {
             < footer style={{ padding: '3rem 0', borderTop: '1px solid rgba(255,255,255,0.05)', textAlign: 'center', color: 'var(--text-secondary)' }}>
                 <div className="container">
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-                        <Cpu size={20} color="#14b8a6" />
+                        <Cpu size={20} color="#2563eb" />
                         <span style={{ fontWeight: 'bold', color: 'white' }}>AI-Dev.Works</span>
                     </div>
                     <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}>Operated by NexRide Inc.</p>
@@ -631,7 +631,7 @@ const PlanCard = ({ title, subtitle, price, period, features, isPopular }: PlanC
         <ul style={{ marginBottom: '2rem' }}>
             {features.map((f, i) => (
                 <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.8rem', fontSize: '0.95rem' }}>
-                    <CheckCircle size={16} color={isPopular ? "#14b8a6" : "#a0a0b0"} /> {f}
+                    <CheckCircle size={16} color={isPopular ? "#2563eb" : "#a0a0b0"} /> {f}
                 </li>
             ))}
         </ul>
@@ -721,7 +721,7 @@ const TypewriterText = ({ text, startDelay = 0, showCursor = false }: Typewriter
                 opacity: (isTyping || (isFinished && showCursor && blink)) ? 1 : 0,
                 transition: 'opacity 0.1s',
                 marginLeft: '2px',
-                color: '#14b8a6'
+                color: '#2563eb'
             }}>|</span>
         </span>
     );

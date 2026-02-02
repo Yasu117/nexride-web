@@ -16,15 +16,15 @@ interface Business {
 
 const businesses: Business[] = [
     {
-        id: 1,
-        title: "システム開発 / Web開発",
-        serviceName: "AI-Dev.Works",
-        description: "最先端のAI技術を活用した効率的かつ高品質なシステム・Web開発を提供します。",
-        icon: <Code2 />,
-        colorClass: "text-blue-600",
-        bgClass: "bg-blue-50",
-        gradient: "from-blue-600 to-cyan-500",
-        link: "/ai-dev-works"
+        id: 3,
+        title: "デジタル業務再設計支援",
+        serviceName: "Real DX",
+        description: "業務プロセスの抜本的な見直しとデジタル化により、真のDXを実現します。",
+        icon: <RefreshCw />,
+        colorClass: "text-emerald-600",
+        bgClass: "bg-emerald-50",
+        gradient: "from-emerald-600 to-teal-500",
+        link: "/real-dx"
     },
     {
         id: 2,
@@ -38,15 +38,15 @@ const businesses: Business[] = [
         link: "/jyouchu-plus10"
     },
     {
-        id: 3,
-        title: "デジタル業務再設計支援",
-        serviceName: "Real DX",
-        description: "業務プロセスの抜本的な見直しとデジタル化により、真のDXを実現します。",
-        icon: <RefreshCw />,
-        colorClass: "text-emerald-600",
-        bgClass: "bg-emerald-50",
-        gradient: "from-emerald-600 to-teal-500",
-        link: "/real-dx"
+        id: 1,
+        title: "システム開発 / Web開発",
+        serviceName: "AI-Dev.Works",
+        description: "最先端のAI技術を活用した効率的かつ高品質なシステム・Web開発を提供します。",
+        icon: <Code2 />,
+        colorClass: "text-blue-600",
+        bgClass: "bg-blue-50",
+        gradient: "from-blue-600 to-cyan-500",
+        link: "/ai-dev-works"
     }
 ];
 
