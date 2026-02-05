@@ -3,96 +3,64 @@
 import React from "react";
 import { Dock, DockIcon } from "@/components/ui/dock";
 import { motion } from "framer-motion";
-import { Code, Users, Globe, Bot, Cloud, PenTool, Handshake, Laptop } from "lucide-react";
+import { Code, Users, Globe, Bot, Cloud, PenTool, Handshake, Laptop, Rocket, Sparkles, RefreshCw, Search, Store } from "lucide-react";
 
 const icons = [
     {
-        title: "採用代行 / Web制作",
-        description: ["H運送会社向けオリジナル採用Webページの制作"],
-        Icon: Globe,
-        tags: ["Web制作", "運送業界", "採用支援"],
-        stats: "Web制作",
-        year: "2023"
+        title: "新規事業向けMVP開発",
+        description: ["新規事業立ち上げ、PoC、プロトタイプ開発支援"],
+        Icon: Rocket,
+        tags: ["新規事業", "MVP", "PoC"],
+        stats: "MVP",
+        year: "2025"
     },
     {
-        title: "人材紹介 / 採用代行",
-        description: ["運送業界・建設業界・飲食業界への人材紹介および採用支援"],
-        Icon: Users,
-        tags: ["人材紹介", "3業界対応", "採用代行"],
-        stats: "3業界",
-        year: "2023"
+        title: "AI活用システム構築",
+        description: ["業務効率化を目的とした生成AI活用システムの設計・開発"],
+        Icon: Sparkles,
+        tags: ["生成AI", "自動化", "業務効率"],
+        stats: "AI活用",
+        year: "2025"
     },
     {
-        title: "採用代行 / Web制作",
-        description: ["E運送会社向けオリジナル採用Webページの制作"],
-        Icon: Laptop,
-        tags: ["Web制作", "運送業界", "採用支援"],
-        stats: "Web制作",
-        year: "2023"
+        title: "業務プロセスデジタル化",
+        description: ["属人化業務のフロー可視化・再設計・システム化"],
+        Icon: RefreshCw,
+        tags: ["業務改善", "デジタル化", "内製化"],
+        stats: "デジタル化",
+        year: "2025"
     },
     {
-        title: "採用支援",
-        description: ["外国人技能実習生の紹介・採用支援"],
-        Icon: Handshake,
-        tags: ["技能実習生", "グローバル", "採用支援"],
-        stats: "外国人材",
-        year: "2024"
+        title: "社内業務DX支援",
+        description: ["社内業務の棚卸しと可視化によるDX推進体制構築"],
+        Icon: Search,
+        tags: ["社内DX", "可視化", "業務設計"],
+        stats: "社内DX",
+        year: "2026"
     },
     {
-        title: "デジタル業務再設計",
-        description: ["企業向けAI研修（社内セミナー）を講師として、月1〜2回の頻度で実施"],
+        title: "業務設計・再構築",
+        description: ["業務起点のデジタル業務再設計とシステム化範囲の最適化"],
+        Icon: PenTool,
+        tags: ["業務改革", "DX支援", "設計"],
+        stats: "業務設計",
+        year: "2026"
+    },
+    {
+        title: "生成AI社内導入",
+        description: ["生成AIの利用ルール策定・ユースケース整理・研修"],
         Icon: Bot,
-        tags: ["AI研修", "業務効率化", "生成AI"],
-        stats: "月1-2回",
-        year: "2024"
+        tags: ["生成AI", "導入支援", "研修"],
+        stats: "AI導入",
+        year: "2026"
     },
     {
-        title: "SES事業 / 受託開発",
-        description: ["大手ライフスタイル企業のアプリ開発にインフラエンジニアとして従事"],
-        Icon: Code,
-        tags: ["インフラ", "アプリ開発", "大規模開発"],
-        stats: "SES",
-        year: "2024"
-    },
-    {
-        title: "SES事業 / 受託開発",
-        description: ["大手SIerの大規模開発プロジェクトにインフラエンジニアとして参画"],
-        Icon: Code,
-        tags: ["インフラ", "SIer", "大規模開発"],
-        stats: "SES",
-        year: "2024"
-    },
-    {
-        title: "社内DX支援",
-        description: ["不動産企業向けインフラ最適化支援"],
-        Icon: Cloud,
-        tags: ["AWS/GCP", "インフラ最適化"],
-        stats: "DX支援",
-        year: "2025"
-    },
-    {
-        title: "社内DX支援",
-        description: ["クラウド利用コスト削減（Cloud Cost Optimization）支援"],
-        Icon: Cloud,
-        tags: ["コスト削減", "FinOps"],
-        stats: "DX支援",
-        year: "2025"
-    },
-    {
-        title: "SES事業 / 受託開発",
-        description: ["大手ゲーム企業の開発プロジェクトへデザイナーが参画"],
-        Icon: PenTool,
-        tags: ["ゲーム開発", "デザイン"],
-        stats: "SES",
-        year: "2025"
-    },
-    {
-        title: "SES事業 / 受託開発",
-        description: ["大手SIerの大規模開発プロジェクトにインフラエンジニアが参画"],
-        Icon: PenTool,
-        tags: ["インフラ", "SIer"],
-        stats: "SES",
-        year: "2025"
+        title: "小規模業務システム",
+        description: ["小規模事業者向け業務管理Webシステムの開発"],
+        Icon: Store,
+        tags: ["Webシステム", "業務管理"],
+        stats: "Web開発",
+        year: "2026"
     },
 ];
 

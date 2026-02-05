@@ -1,8 +1,121 @@
-import { Code, Users, Globe, Bot, Cloud, PenTool, Handshake, Laptop } from "lucide-react";
+import { Code, Users, Globe, Bot, Cloud, PenTool, Handshake, Laptop, Rocket, Sparkles, RefreshCw, Search, Store } from "lucide-react";
 import Image from "next/image";
 
 export default function CasesPage() {
     const cases = [
+        // 2026 Cases
+        {
+            title: "社内業務の可視化・再設計によるDX推進支援",
+            description: [
+                "社内業務の棚卸しおよび業務フローの可視化を行い、属人化していた業務や重複業務を整理。",
+                "業務プロセスの再設計と簡易システム化を通じて、現場主導で改善を継続できる社内DX体制を構築。"
+            ],
+            Icon: Search,
+            tags: ["社内DX", "業務可視化", "業務設計", "業務改善"],
+            year: "2026",
+            image: "/images/cases/ui_consulting.png"
+        },
+        {
+            title: "業務起点のデジタル業務再設計支援",
+            description: [
+                "現場業務の棚卸しから着手し、業務フローの整理、不要工程の削減、システム化範囲の切り分けまでを含めた業務再設計を実施。",
+                "ツール導入ありきではなく、業務構造そのものを見直す形でのDX支援を行った。"
+            ],
+            Icon: PenTool,
+            tags: ["業務改革", "DX支援", "業務設計", "業務改善"],
+            year: "2026",
+            image: "/images/cases/ui_consulting.png"
+        },
+        {
+            title: "生成AI活用の社内導入・定着支援",
+            description: [
+                "生成AIの社内活用に向け、利用ルール整備、業務別ユースケース整理、活用方法レクチャーまでを含めた導入支援を実施。",
+                "現場が自走できる運用体制の構築を目的とした支援を行った。"
+            ],
+            Icon: Bot,
+            tags: ["生成AI", "社内導入", "内製化", "研修"],
+            year: "2026",
+            image: "/images/cases/ui_consulting.png"
+        },
+        {
+            title: "小規模事業者向け業務管理システム開発",
+            description: [
+                "小規模事業者の実業務に即した形で、顧客管理、案件管理、請求管理等を統合した業務管理Webシステムを開発。",
+                "過剰な機能を排除し、日常業務で使い続けられる設計を重視。"
+            ],
+            Icon: Store,
+            tags: ["業務管理", "Webシステム", "小規模事業者", "システム開発"],
+            year: "2026",
+            image: "/images/cases/ui_dev.png"
+        },
+        // 2025 Cases
+        {
+            title: "新規事業向けMVP／PoC開発支援",
+            description: [
+                "新規事業立ち上げを検討する企業・個人事業主向けに、企画整理から要件定義、最小構成でのWebシステム開発までを一貫して支援。",
+                "短期間で検証可能なプロトタイプを構築し、事業検証に集中できる開発体制を提供。"
+            ],
+            Icon: Rocket,
+            tags: ["新規事業", "MVP開発", "PoC", "Webシステム"],
+            year: "2025",
+            image: "/images/cases/ui_dev.png"
+        },
+        {
+            title: "業務効率化を目的としたAI活用システム構築",
+            description: [
+                "既存業務の整理を行った上で、生成AIを活用した業務支援システムを設計・構築。",
+                "データ整理、文章作成、情報抽出などの業務を自動化し、日常業務の工数削減と属人化解消を実現。"
+            ],
+            Icon: Sparkles,
+            tags: ["生成AI", "業務自動化", "業務効率化", "システム開発"],
+            year: "2025",
+            image: "/images/cases/ui_consulting.png"
+        },
+        {
+            title: "営業・業務プロセスのデジタル化支援",
+            description: [
+                "属人化していた営業・管理業務を対象に、業務フローの可視化および整理を実施。",
+                "業務プロセスの再設計とシステム化により、再現性のある業務運用体制を構築。"
+            ],
+            Icon: RefreshCw,
+            tags: ["業務改善", "業務設計", "デジタル化", "内製化支援"],
+            year: "2025",
+            image: "/images/cases/ui_consulting.png"
+        },
+        {
+            title: "社内DX支援",
+            description: ["クラウド利用コスト削減（Cloud Cost Optimization）支援"],
+            Icon: Cloud,
+            tags: ["コスト削減", "FinOps"],
+            year: "2025",
+            image: "/images/cases/ui_consulting.png"
+        },
+        {
+            title: "SES事業 / 受託開発",
+            description: ["大手SIerの大規模開発プロジェクトにインフラエンジニアが参画"],
+            Icon: PenTool,
+            tags: ["インフラ", "SIer"],
+            year: "2025",
+            image: "/images/cases/ui_dev.png"
+        },
+        // 2024 Cases
+        {
+            title: "採用支援",
+            description: ["外国人技能実習生の紹介・採用支援"],
+            Icon: Handshake,
+            tags: ["技能実習生", "グローバル", "採用支援"],
+            year: "2024",
+            image: "/images/cases/ui_consulting.png"
+        },
+        {
+            title: "SES事業 / 受託開発",
+            description: ["大手ライフスタイル企業のアプリ開発にインフラエンジニアとして従事"],
+            Icon: Code,
+            tags: ["インフラ", "アプリ開発", "大規模開発"],
+            year: "2024",
+            image: "/images/cases/ui_dev.png"
+        },
+        // 2023 Cases
         {
             title: "採用代行 / Web制作",
             description: ["H運送会社向けオリジナル採用Webページの制作"],
@@ -18,78 +131,6 @@ export default function CasesPage() {
             tags: ["人材紹介", "3業界対応", "採用代行"],
             year: "2023",
             image: "/images/cases/ui_consulting.png"
-        },
-        {
-            title: "採用代行 / Web制作",
-            description: ["E運送会社向けオリジナル採用Webページの制作"],
-            Icon: Laptop,
-            tags: ["Web制作", "運送業界", "採用支援"],
-            year: "2023",
-            image: "/images/cases/ui_dev.png"
-        },
-        {
-            title: "採用支援",
-            description: ["外国人技能実習生の紹介・採用支援"],
-            Icon: Handshake,
-            tags: ["技能実習生", "グローバル", "採用支援"],
-            year: "2024",
-            image: "/images/cases/ui_consulting.png"
-        },
-        {
-            title: "デジタル業務再設計",
-            description: ["企業向けAI研修（社内セミナー）を講師として、月1〜2回の頻度で実施"],
-            Icon: Bot,
-            tags: ["AI研修", "業務効率化", "生成AI"],
-            year: "2024",
-            image: "/images/cases/ui_consulting.png"
-        },
-        {
-            title: "SES事業 / 受託開発",
-            description: ["大手ライフスタイル企業のアプリ開発にインフラエンジニアとして従事"],
-            Icon: Code,
-            tags: ["インフラ", "アプリ開発", "大規模開発"],
-            year: "2024",
-            image: "/images/cases/ui_dev.png"
-        },
-        {
-            title: "SES事業 / 受託開発",
-            description: ["大手SIerの大規模開発プロジェクトにインフラエンジニアとして参画"],
-            Icon: Code,
-            tags: ["インフラ", "SIer", "大規模開発"],
-            year: "2024",
-            image: "/images/cases/ui_dev.png"
-        },
-        {
-            title: "社内DX支援",
-            description: ["不動産企業向けインフラ最適化支援"],
-            Icon: Cloud,
-            tags: ["AWS/GCP", "インフラ最適化"],
-            year: "2025",
-            image: "/images/cases/ui_dev.png"
-        },
-        {
-            title: "社内DX支援",
-            description: ["クラウド利用コスト削減（Cloud Cost Optimization）支援"],
-            Icon: Cloud,
-            tags: ["コスト削減", "FinOps"],
-            year: "2025",
-            image: "/images/cases/ui_consulting.png"
-        },
-        {
-            title: "SES事業 / 受託開発",
-            description: ["大手ゲーム企業の開発プロジェクトへデザイナーが参画"],
-            Icon: PenTool,
-            tags: ["ゲーム開発", "デザイン"],
-            year: "2025",
-            image: "/images/cases/ui_dev.png"
-        },
-        {
-            title: "SES事業 / 受託開発",
-            description: ["大手SIerの大規模開発プロジェクトにインフラエンジニアが参画"],
-            Icon: PenTool,
-            tags: ["インフラ", "SIer"],
-            year: "2025",
-            image: "/images/cases/ui_dev.png"
         }
     ];
 
@@ -134,6 +175,11 @@ export default function CasesPage() {
                         </div>
                     </div>
                 ))}
+            </div>
+
+            <div className="text-center mt-16 text-slate-500 text-sm md:text-base leading-relaxed">
+                <p>※ 機密保持契約等により、上記は実績の一部を抜粋して掲載しています。</p>
+                <p className="mt-2 text-slate-400">その他の開発事例や詳細については、お気軽にお問い合わせください。</p>
             </div>
         </div>
     )
