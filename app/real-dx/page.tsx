@@ -50,7 +50,7 @@ export default function RealDXPage() {
                         </div>
                         <div className="flex flex-col">
                             <span className="text-[10px] md:text-xs font-bold text-slate-500 leading-none mb-0.5 whitespace-nowrap">デジタル業務再設計支援</span>
-                            <span className="text-xl font-bold tracking-tight text-slate-800 leading-none">Real<span className="text-teal-600">DX</span></span>
+                            <span className="text-xl font-bold tracking-tight text-slate-800 leading-none">Nexus Consulting</span>
                         </div>
                     </Link>
 
@@ -98,9 +98,9 @@ export default function RealDXPage() {
                         <div className="flex-1 text-left">
 
 
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.2] mb-6 animate-fade-in-up delay-100 text-slate-900">
-                                業務の<span className="text-teal-600 bg-teal-50 px-3 py-1 rounded-lg mx-1 inline-block">「再設計」</span>から、<br />
-                                会社の余白をつくる。
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.3] mb-6 animate-fade-in-up delay-100 text-slate-900">
+                                <span className="inline-block">業務の<span className="text-teal-600 bg-teal-50 px-2 py-1 rounded-lg mx-1">「再設計」</span>から、</span><br />
+                                <span className="inline-block">会社の余白をつくる。</span>
                             </h1>
 
                             <p className="text-lg text-slate-600 mb-10 max-w-xl leading-relaxed animate-fade-in-up delay-200">
@@ -256,7 +256,7 @@ export default function RealDXPage() {
                         </div>
 
                         <div className="flex-1 w-full relative p-8 bg-slate-50 border-2 border-slate-200 text-center">
-                            <h3 className="text-lg font-bold text-slate-900 mb-8 tracking-wider bg-white inline-block px-4 py-1 border border-slate-900 shadow-[2px_2px_0px_0px_#0f172a]">Real DXのステップ</h3>
+                            <h3 className="text-lg font-bold text-slate-900 mb-8 tracking-wider bg-white inline-block px-4 py-1 border border-slate-900 shadow-[2px_2px_0px_0px_#0f172a]">Nexus Consultingのステップ</h3>
 
                             <div className="flex flex-col md:flex-row items-center justify-center gap-4">
                                 <div className="flex-1 p-6 bg-white border-2 border-slate-200 flex flex-col items-center">
@@ -284,6 +284,15 @@ export default function RealDXPage() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    {/* Origin of the Name section - Centered below */}
+                    <div className="max-w-3xl mx-auto mt-16 pt-12 border-t border-slate-100 text-center animate-fade-in-up">
+                        <p className="text-slate-900 font-bold leading-relaxed text-base md:text-lg">
+                            <span className="text-teal-600 mb-2 block font-extrabold tracking-wider underline decoration-teal-50 underline-offset-8">名称の由来：</span>
+                            点在する課題をなめらかに繋ぎ（<span className="text-teal-600">Nexus</span>）、<br />
+                            ビジネスに新たな価値の連鎖を生み出すパートナーでありたいと考えています。
+                        </p>
                     </div>
                 </div>
             </section>
@@ -495,9 +504,9 @@ export default function RealDXPage() {
                         <div className="w-8 h-8 rounded bg-teal-600 flex items-center justify-center text-white">
                             <RefreshCw size={16} />
                         </div>
-                        <span className="text-xl font-bold text-slate-700 tracking-tight">Real<span className="text-teal-600">DX</span></span>
+                        <span className="text-xl font-bold text-slate-700 tracking-tight">Nexus Consulting</span>
                     </div>
-                    <p className="text-sm">© 2024 Real DX / NexRide Inc.</p>
+                    <p className="text-sm">© 2024 Nexus Consulting / NexRide Inc.</p>
                 </div>
             </footer>
         </div>

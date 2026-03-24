@@ -16,7 +16,7 @@ export default function CompanyPage() {
                         { label: '資本金', value: '5,100万円' },
                         { label: '所在地', value: '東京都港区新橋2丁目20-15-601 新橋駅前ビル1号館 6階 BISTATION' },
                         { label: 'Mail', value: 'info@nexride.co.jp' },
-                        { label: '事業内容', value: 'システム開発事業 / SES・人材エージェント事業 / デジタル業務再設計（Real DX）事業' },
+                        { label: '事業内容', value: 'システム開発事業 / SES・人材エージェント事業 / デジタル業務再設計（Nexus Consulting）事業' },
                         { label: '許可番号', value: '有料職業紹介事業許可番号：13-ユ-315603' },
                     ].map((item, i) => (
                         <div key={i} className="grid md:grid-cols-3 gap-4 p-6 hover:bg-slate-50 transition-colors">

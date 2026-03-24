@@ -26,7 +26,7 @@ const businesses: Business[] = [
     {
         id: 3,
         title: "デジタル業務再設計支援",
-        serviceName: "Real DX",
+        serviceName: "Nexus Consulting",
         description: "業務プロセスの抜本的な見直しとデジタル化により、真のDXを実現します。",
         icon: <RefreshCw />,
         gradient: "from-emerald-600 to-teal-500",
