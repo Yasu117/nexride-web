@@ -2,7 +2,7 @@
 
 @theme {
   --font-sans: var(--font-inter);
-  --animate-marquee: marquee 80s linear infinite;
+  --animate-marquee: marquee 183s linear infinite;
 
   /* EnJyouChu Theme */
   --color-primary-50: #f0fdfa;

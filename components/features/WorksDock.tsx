@@ -3,9 +3,81 @@
 import React from "react";
 import { Dock, DockIcon } from "@/components/ui/dock";
 import { motion } from "framer-motion";
-import { Code, Users, Globe, Bot, Cloud, PenTool, Handshake, Laptop, Rocket, Sparkles, RefreshCw, Search, Store } from "lucide-react";
+import { Code, Users, Globe, Bot, Cloud, PenTool, Handshake, Laptop, Rocket, Sparkles, RefreshCw, Search, Store, Briefcase, Activity, Database, Truck } from "lucide-react";
 
 const icons = [
+    {
+        title: "自社プロダクト開発",
+        description: ["受注管理システム「NexusOMS」の開発・提供"],
+        Icon: Store,
+        tags: ["受発注管理", "Webシステム"],
+        stats: "自社ツール",
+        year: "2026"
+    },
+    {
+        title: "応募プラットフォーム構築",
+        description: ["求職者の応募・登録情報を一元管理するシステム"],
+        Icon: Users,
+        tags: ["採用", "Web開発"],
+        stats: "採用支援",
+        year: "2026"
+    },
+    {
+        title: "AIエージェントツール作成",
+        description: ["Google Workspace連携の業務自動アシストツール開発"],
+        Icon: Bot,
+        tags: ["生成AI", "自動化"],
+        stats: "AIツール",
+        year: "2026"
+    },
+    {
+        title: "ITSM整理・アセット化",
+        description: ["運用ノウハウの標準化と社内アセット化コンサルティング"],
+        Icon: Briefcase,
+        tags: ["ITSM", "ITコンサル"],
+        stats: "業務設計",
+        year: "2026"
+    },
+    {
+        title: "旅行業システム更改支援",
+        description: ["老朽化した旅行向け基幹システムの刷新と基盤移行"],
+        Icon: Globe,
+        tags: ["旅行業界", "基幹更改"],
+        stats: "システム更改",
+        year: "2026"
+    },
+    {
+        title: "印刷業基幹システム改修",
+        description: ["業務要件に合わせた印刷会社向けシステム機能改修"],
+        Icon: Code,
+        tags: ["印刷業", "保守開発"],
+        stats: "機能改修",
+        year: "2026"
+    },
+    {
+        title: "ヘルスケアアプリ開発",
+        description: ["医療・ヘルスケア分野の新規Webアプリケーション構築"],
+        Icon: Activity,
+        tags: ["ヘルスケア", "新規開発"],
+        stats: "Webアプリ",
+        year: "2026"
+    },
+    {
+        title: "素材管理システム構築",
+        description: ["デジタルコンテンツを一元管理・検索するシステム"],
+        Icon: Database,
+        tags: ["データ管理", "構築支援"],
+        stats: "システム構築",
+        year: "2026"
+    },
+    {
+        title: "運輸業システム業務支援",
+        description: ["次世代システム構築に向けた業務要件の抽出・整理"],
+        Icon: Truck,
+        tags: ["運輸業", "要件定義"],
+        stats: "システム支援",
+        year: "2026"
+    },
     {
         title: "新規事業向けMVP開発",
         description: ["新規事業立ち上げ、PoC、プロトタイプ開発支援"],

@@ -1,9 +1,108 @@
-import { Code, Users, Globe, Bot, Cloud, PenTool, Handshake, Laptop, Rocket, Sparkles, RefreshCw, Search, Store } from "lucide-react";
+import { Code, Users, Globe, Bot, Cloud, PenTool, Handshake, Laptop, Rocket, Sparkles, RefreshCw, Search, Store, Briefcase, Activity, Database, Truck } from "lucide-react";
 import Image from "next/image";
 
 export default function CasesPage() {
     const cases = [
         // 2026 Cases
+        {
+            title: "受注管理システム「NexusOMS」の開発・提供",
+            description: [
+                "受発注業務を効率化する自社プロダクト「NexusOMS」を開発。",
+                "直感的なUIと必要十分な機能で、現場の業務負担を大幅に削減。"
+            ],
+            Icon: Store,
+            tags: ["自社プロダクト", "受注管理", "Webシステム"],
+            year: "2026",
+            image: "/images/cases/ui_dev.png"
+        },
+        {
+            title: "採用・応募登録プラットフォーム構築",
+            description: [
+                "求職者の応募から登録情報の管理までを一元化するプラットフォームを開発。",
+                "採用担当者のオペレーションコスト低減と応募者の利便性向上を実現。"
+            ],
+            Icon: Users,
+            tags: ["採用プラットフォーム", "Web開発", "業務効率化"],
+            year: "2026",
+            image: "/images/cases/ui_dev.png"
+        },
+        {
+            title: "Google Workspace連携AIツールの開発",
+            description: [
+                "Google Workspace（Gmailやドキュメント等）と連携し、AIが日々の業務を自動アシストする社内環境を構築。",
+                "反復作業の自動化により、コア業務へ集中できる体制を整備。"
+            ],
+            Icon: Bot,
+            tags: ["生成AI", "Google API", "業務自動化"],
+            year: "2026",
+            image: "/images/cases/ui_dev.png"
+        },
+        {
+            title: "ITSM整理・社内アセット化コンサルティング",
+            description: [
+                "ITサービスマネジメント（ITSM）のプロセス整理および社内アセット化の推進を支援。",
+                "属人化していた運用ノウハウの標準化・ドキュメント化を実施。"
+            ],
+            Icon: Briefcase,
+            tags: ["ITコンサル", "ITSM", "業務設計"],
+            year: "2026",
+            image: "/images/cases/ui_consulting.png"
+        },
+        {
+            title: "旅行業向け基幹システム更改支援",
+            description: [
+                "既存の老朽化した旅行システムの刷新プロジェクトにおいて、設計からテストフェーズまでの更改作業を技術支援。",
+                "業務影響を最小限に抑えつつ、モダンなシステム基盤への移行を実現。"
+            ],
+            Icon: Globe,
+            tags: ["基幹システム", "旅行業界", "SES"],
+            year: "2026",
+            image: "/images/cases/ui_dev.png"
+        },
+        {
+            title: "印刷会社向け基幹システム改修",
+            description: [
+                "印刷会社の独自の業務要件に合わせた基幹システムの機能改修および保守開発を担当。",
+                "生産管理から納品までのデータ連携をスムーズにし、業務効率化に貢献。"
+            ],
+            Icon: Code,
+            tags: ["基幹システム", "システム改修", "SES"],
+            year: "2026",
+            image: "/images/cases/ui_dev.png"
+        },
+        {
+            title: "ヘルスケア領域Webアプリケーション新規開発",
+            description: [
+                "医療・ヘルスケア分野における新規Webアプリケーションの開発プロジェクトに参画。",
+                "セキュアなデータ管理とユーザーフレンドリーなUI設計を考慮した実装を支援。"
+            ],
+            Icon: Activity,
+            tags: ["ヘルスケア", "Webアプリ", "新規開発"],
+            year: "2026",
+            image: "/images/cases/ui_dev.png"
+        },
+        {
+            title: "デジタル素材管理システム構築支援",
+            description: [
+                "デジタル素材・コンテンツを一元管理し、効率的に検索・利用できるシステムの構築プロジェクトに参画。",
+                "要件定義フェーズから開発フェーズまで一貫した技術支援を提供。"
+            ],
+            Icon: Database,
+            tags: ["データ管理", "システム構築", "SES"],
+            year: "2026",
+            image: "/images/cases/ui_dev.png"
+        },
+        {
+            title: "運輸業向け次世代システム業務支援",
+            description: [
+                "運輸・物流業界における次世代システム構築プロジェクトにおいて、業務要件の抽出および整理を支援。",
+                "現場の課題をシステム要件に落とし込み、スムーズな開発進行に貢献。"
+            ],
+            Icon: Truck,
+            tags: ["運輸業", "次世代システム", "業務支援"],
+            year: "2026",
+            image: "/images/cases/ui_consulting.png"
+        },
         {
             title: "社内業務の可視化・再設計によるDX推進支援",
             description: [
