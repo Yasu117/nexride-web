@@ -24,6 +24,7 @@ export default function Footer() {
                         <Link href="/about" className="text-sm text-slate-600 hover:text-[#0F4C5C] transition-colors">About us</Link>
                         <Link href="/recruit" className="text-sm text-slate-600 hover:text-[#0F4C5C] transition-colors">採用情報</Link>
                         <Link href="/privacy" className="text-sm text-slate-600 hover:text-[#0F4C5C] transition-colors">プライバシーポリシー</Link>
+                        <Link href="/security" className="text-sm text-slate-600 hover:text-[#0F4C5C] transition-colors">情報セキュリティ基本方針</Link>
                         <Link href="/#contact" className="text-sm text-slate-600 hover:text-[#0F4C5C] transition-colors">お問い合わせ</Link>
                     </nav>
                 </div>
