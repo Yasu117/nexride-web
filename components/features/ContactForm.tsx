@@ -72,7 +72,10 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                         className="w-full px-3 py-2 text-base md:text-sm rounded-lg bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-[#57C7D4] focus:ring-1 focus:ring-[#57C7D4] transition-colors appearance-none"
                     >
                         <option value="">選択してください</option>
-                        <option value="開発・DXのご相談">開発・DXのご相談（見積もり・依頼）</option>
+                        <option value="Nexus Consulting">デジタル業務再設計（Nexus Consulting）のご相談</option>
+                        <option value="Nexus OMS">受注管理システム（Nexus OMS）のご相談</option>
+                        <option value="AI-Dev.Works">システム開発・Web開発（AI-Dev.Works）のご相談</option>
+                        <option value="SES・人材紹介">SES・人材紹介エージェントに関するご相談</option>
                         <option value="SES・パートナー協業">SES・パートナー協業のご相談</option>
                         <option value="採用応募・質問">採用へのご応募・ご質問</option>
                         <option value="その他">その他</option>
@@ -93,7 +96,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                         id="company"
                         type="text"
                         name="company"
-                        placeholder="株式会社ネクスライド"
+                        placeholder="ネクスライド株式会社"
                         className="w-full px-3 py-2 text-base md:text-sm rounded-lg bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-[#57C7D4] focus:ring-1 focus:ring-[#57C7D4] transition-colors"
                     />
                 </div>
