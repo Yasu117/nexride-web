@@ -174,9 +174,9 @@ export default function NexusOMSLandingPage() {
                   Wix、Shopifyなどの主要ECプラットフォームから、FAX、メールでの注文まで、あらゆる受注データを1つの画面に自動で統合します。転記作業はもう必要ありません。
                 </p>
                 <ul className="space-y-3 pt-4">
-                  {['ECカート連携（Shopify / Wix 等）', 'メールからのAI自動抽出', '手書きFAXのOCR取り込み'].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-slate-700">
-                      <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                  {['ECカート連携（Shopify / Wix / Amazon / BASE / 楽天 / Yahoo! / MakeShop / カラーミー / ZOZO / STORES / 自社EC 等）', 'メールからのAI自動抽出', '手書きFAXのOCR取り込み'].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-slate-700">
+                      <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
