@@ -399,8 +399,10 @@ export default function RealDXPage() {
                         <CaseStudySimple
                             title="受発注・在庫管理の完全自動化"
                             problem="FAXや電話で来る注文を手書きで台帳に記入。在庫数は目視確認のため、欠品や過剰在庫が頻発していた。"
-                            solution="注文をタブレット入力化し、在庫データベースと連携。発注点を超えたら自動で仕入先に発注メールが飛ぶ仕組みを構築。"
+                            solution="受発注システム「Nexus OMS」を導入。注文のデジタル化と在庫のリアルタイム連動により、業務を完全自動化。"
                             result="在庫確認作業ゼロ & 欠品率改善"
+                            linkUrl={process.env.NODE_ENV === 'development' ? "http://localhost:3000/nexus-oms" : "/nexus-oms"}
+                            linkText="Nexus OMSの詳細を見る"
                         />
                         <CaseStudySimple
                             title="紙の経費精算の廃止"
@@ -533,7 +535,7 @@ function ProblemCard({ icon, title, desc }: { icon: React.ReactElement, title: s
     );
 }
 
-function CaseStudySimple({ title, problem, solution, result }: { title: string, problem: string, solution: string, result: string }) {
+function CaseStudySimple({ title, problem, solution, result, linkUrl, linkText }: { title: string, problem: string, solution: string, result: string, linkUrl?: string, linkText?: string }) {
     return (
         <div className="bg-white p-6 border-2 border-slate-900 shadow-[6px_6px_0px_0px_#cbd5e1] hover:shadow-[8px_8px_0px_0px_#14b8a6] hover:border-teal-600 transition-all duration-200 flex flex-col h-full group">
             <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-3 border-b-2 border-slate-100 pb-4">
@@ -558,6 +560,14 @@ function CaseStudySimple({ title, problem, solution, result }: { title: string, 
                     <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Result</div>
                     <div className="text-xl font-black text-teal-600 text-right">{result}</div>
                 </div>
+                {linkUrl && linkText && (
+                    <div className="mt-5 pt-4 border-t border-slate-200 text-right">
+                        <Link href={linkUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-teal-600 transition-colors group/link">
+                            {linkText}
+                            <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
+                        </Link>
+                    </div>
+                )}
             </div>
         </div>
     );
