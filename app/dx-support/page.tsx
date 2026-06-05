@@ -134,7 +134,7 @@ export default function DxSupportLP() {
                 <div className="bg-white text-[#1A2B4C] rounded-xl p-8 shadow-xl flex flex-col">
                     <h3 className="text-xl font-bold mb-2">3. DX業務改善パッケージ</h3>
                     <p className="text-[#E67E22] font-bold text-2xl mb-2">3ヶ月 150万円<span className="text-base font-normal text-gray-500">〜</span></p>
-                    <p className="text-xs text-gray-500 mb-6 opacity-0">spacer</p>
+                    <p className="text-xs text-gray-500 mb-6">※ 月50万円相当</p>
                     <p className="text-sm text-gray-600 mb-8 flex-grow leading-relaxed">経営者・現場責任者へのヒアリングを通じて、業務課題を可視化し、AI・DX活用の優先順位と実行ロードマップを作成するパッケージ。</p>
                     <div className="bg-gray-50 p-4 rounded-lg text-sm border border-gray-100">
                         <p className="font-bold mb-3 text-[#1A2B4C]">向いている企業</p>
@@ -165,7 +165,7 @@ export default function DxSupportLP() {
                 {/* 5 */}
                 <div className="bg-white text-[#1A2B4C] rounded-xl p-8 shadow-xl flex flex-col">
                     <h3 className="text-xl font-bold mb-2">5. 業務システム・Webアプリ開発</h3>
-                    <p className="text-[#E67E22] font-bold text-2xl mb-2">1プロ 80万円<span className="text-base font-normal text-gray-500">〜</span></p>
+                    <p className="text-[#E67E22] font-bold text-2xl mb-2">1プロダクト 80万円<span className="text-base font-normal text-gray-500">〜</span></p>
                     <p className="text-xs text-gray-500 mb-6">期間：最短1ヶ月〜</p>
                     <p className="text-sm text-gray-600 mb-8 leading-relaxed">業務課題や事業アイデアに合わせて、必要な機能を絞ったシステム・Webアプリを開発するプラン。</p>
                     <div className="bg-gray-50 p-4 rounded-lg text-sm border border-gray-100">
