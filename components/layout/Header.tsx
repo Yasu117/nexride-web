@@ -8,8 +8,7 @@ import { useState } from 'react';
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathname = usePathname();
-
-    if (pathname === '/ai-dev-works' || pathname === '/jyouchu-plus10' || pathname === '/real-dx' || pathname === '/terms') return null;
+    if (pathname === '/ai-dev-works' || pathname === '/jyouchu-plus10' || pathname === '/real-dx' || pathname === '/terms' || pathname === '/dx-support') return null;
 
     return (
         <header className="fixed top-4 left-0 right-0 mx-auto w-[95%] max-w-7xl z-50">
