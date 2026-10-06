@@ -35,7 +35,7 @@ export default function CompanyPage() {
                         <div className="flex flex-col md:flex-row p-4 hover:bg-slate-50/50 transition-colors items-center">
                             <dt className="w-full md:w-1/4 font-bold text-slate-900 mb-2 md:mb-0">所在地</dt>
                             <dd className="w-full md:w-3/4 text-slate-600">
-                                東京都港区新橋2丁目20-15-601 新橋駅前ビル1号館 6階 BISTATION
+                                東京都港区南青山3丁目1番36号青山丸竹ビル6F
                             </dd>
                         </div>
                         <div className="flex flex-col md:flex-row p-4 hover:bg-slate-50/50 transition-colors items-center">

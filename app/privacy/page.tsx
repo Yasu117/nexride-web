@@ -52,7 +52,7 @@ export default function PrivacyPage() {
                     </p>
                     <div className="mt-4 bg-gray-50 p-6 rounded-lg border border-gray-100">
                         <p className="text-slate-600 leading-relaxed">
-                            住所：東京都港区新橋2丁目20-15-601<br />
+                            住所：東京都港区南青山3丁目1番36号青山丸竹ビル6F<br />
                             社名：ネクスライド株式会社<br />
                             担当部署：個人情報保護管理担当<br />
                             Eメールアドレス：info@nexride.co.jp
