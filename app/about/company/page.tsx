@@ -16,8 +16,7 @@ export default function CompanyPage() {
                         { label: '資本金', value: '5,100万円' },
                         { label: '所在地', value: '東京都港区南青山3丁目1番36号青山丸竹ビル6F' },
                         { label: 'Mail', value: 'info@nexride.co.jp' },
-                        { label: '事業内容', value: 'システム開発事業 / SES・人材エージェント事業 / デジタル業務再設計（Nexus Consulting）事業' },
-                        { label: '許可番号', value: '有料職業紹介事業許可番号：13-ユ-315603' },
+                        { label: '事業内容', value: 'ITコンサルティング・DX推進支援 / SES・人材サポート / システム・アプリ開発' },
                     ].map((item, i) => (
                         <div key={i} className="grid md:grid-cols-3 gap-4 p-6 hover:bg-slate-50 transition-colors">
                             <dt className="font-bold text-slate-700">{item.label}</dt>

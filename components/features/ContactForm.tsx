@@ -72,10 +72,10 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                         className="w-full px-3 py-2 text-base md:text-sm rounded-lg bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-[#57C7D4] focus:ring-1 focus:ring-[#57C7D4] transition-colors appearance-none"
                     >
                         <option value="">選択してください</option>
-                        <option value="Nexus Consulting">デジタル業務再設計（Nexus Consulting）のご相談</option>
+                        <option value="ITコンサルティング・DX推進支援">ITコンサルティング・DX推進支援（Nexus Consulting）のご相談</option>
                         <option value="Nexus OMS">受注管理システム（Nexus OMS）のご相談</option>
-                        <option value="AI-Dev.Works">システム開発・Web開発（AI-Dev.Works）のご相談</option>
-                        <option value="SES・人材紹介">SES・人材紹介エージェントに関するご相談</option>
+                        <option value="システム・アプリ開発">システム・アプリ開発（AI-Dev.Works）のご相談</option>
+                        <option value="SES・人材サポート">SES・人材サポートに関するご相談</option>
                         <option value="SES・パートナー協業">SES・パートナー協業のご相談</option>
                         <option value="採用応募・質問">採用へのご応募・ご質問</option>
                         <option value="その他">その他</option>

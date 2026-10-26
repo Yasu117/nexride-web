@@ -25,7 +25,7 @@ interface Business {
 const businesses: Business[] = [
     {
         id: 3,
-        title: "デジタル業務再設計支援",
+        title: "ITコンサルティング・DX推進支援",
         serviceName: "Nexus Consulting",
         description: "業務プロセスの抜本的な見直しとデジタル化により、真のDXを実現します。",
         icon: <RefreshCw />,
@@ -34,7 +34,7 @@ const businesses: Business[] = [
     },
     {
         id: 2,
-        title: "SES事業 / 人材紹介エージェント",
+        title: "SES・人材サポート",
         description: "エンジニアと企業の最適なマッチングを実現し、プロジェクトの成功とキャリアアップを支援します。",
         icon: <Users />,
         gradient: "from-purple-600 to-pink-500",
@@ -54,7 +54,7 @@ const businesses: Business[] = [
     },
     {
         id: 1,
-        title: "システム開発 / Web開発",
+        title: "システム・アプリ開発",
         serviceName: "AI-Dev.Works",
         description: "最先端のAI技術を活用した効率的かつ高品質なシステム・Web開発を提供します。",
         icon: <Code2 />,

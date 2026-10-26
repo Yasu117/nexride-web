@@ -49,7 +49,7 @@ export default function RealDXPage() {
                             <RefreshCw size={20} className="text-white" />
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-[10px] md:text-xs font-bold text-slate-500 leading-none mb-0.5 whitespace-nowrap">デジタル業務再設計支援</span>
+                            <span className="text-[10px] md:text-xs font-bold text-slate-500 leading-none mb-0.5 whitespace-nowrap">ITコンサルティング・DX推進支援</span>
                             <span className="text-xl font-bold tracking-tight text-slate-800 leading-none">Nexus Consulting</span>
                         </div>
                     </Link>

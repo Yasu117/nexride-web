@@ -45,12 +45,8 @@ export default function CompanyPage() {
                         <div className="flex flex-col md:flex-row p-4 hover:bg-slate-50/50 transition-colors items-center">
                             <dt className="w-full md:w-1/4 font-bold text-slate-900 mb-2 md:mb-0">事業内容</dt>
                             <dd className="w-full md:w-3/4 text-slate-600 leading-relaxed">
-                                システム開発事業 / SES・人材エージェント事業 / デジタル業務再設計（Nexus Consulting）事業
+                                ITコンサルティング・DX推進支援 / SES・人材サポート / システム・アプリ開発
                             </dd>
-                        </div>
-                        <div className="flex flex-col md:flex-row p-4 hover:bg-slate-50/50 transition-colors items-center">
-                            <dt className="w-full md:w-1/4 font-bold text-slate-900 mb-2 md:mb-0">許可番号</dt>
-                            <dd className="w-full md:w-3/4 text-slate-600">有料職業紹介事業許可番号：13-ユ-315603</dd>
                         </div>
                     </dl>
                 </div>
